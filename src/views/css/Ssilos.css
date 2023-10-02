@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+
+*{margin:0;padding:0;}
+#jackpot-bar {
+	/* background-image:url(/images/ssilos/src/js_src/jackpot_toolbar/images/themes/deluxe/jackpot_bar.png); */
+	background-image:url(/images/ssilos/src/js_src/jackpot_toolbar/images/themes/deluxe/jackpot_bar.jpg);
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+	height:6vh;
+	width:100vw;	
+}
+
+#jackpotsdiv{
+	z-index: 2000;
+	height: 6vh;
+	pointer-events: none;
+}
+
+.jackpotSsilos_digit{
+	position: relative;
+	float: left;
+	width: 1.4vw;
+	height: 5vh;
+	overflow: hidden;
+}
+
+.jackpotSsilos_digit_inside{
+	position: absolute;
+	width: 1.4vw;
+	height: 55vh
+}
+
+
+#jackpot_winner
+{
+	display:none;
+	position:absolute;
+	top:0.2vh;
+	left:0.2vw;
+	width:20vw;
+	height:6vh;
+	/* background-image:url(/images/ssilos/src/js_src/jackpot_toolbar/images/redbg.gif); */
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 5px;
+	z-index:500;
+	border: 2px solid black;
+}
+#jackpot_winner_title
+{
+	color:yellow;
+	font-weight:bold;
+	font-size:1.5vh;
+	font-family:Tahoma;	
+	text-align:center;
+}
+#jackpot_winner_name
+{
+	color:white;
+	font-size:1.5vh;
+	font-family:Tahoma;	
+	text-align:center;
+}
+#jackpot_winner_amount
+{
+	color:cyan;
+	font-size:1.5vh;
+	font-family:Tahoma;	
+	text-align:center;
+}
+
+.ssilos_normal_jackpots{
+	max-height: 5vh;
+}
+.jackpot_ssilos_all_halfscreen{
+	
+	font-size: min(8vh, 10.5vw);
+	width: 44%;
+	left: 28%;
+	text-align: center;
+	position:absolute;
+	z-index:500;
+	display: grid;
+	align-content: center;
+	height: 8vh;
+	font-family: 'Anton',sans-serif;
+	letter-spacing: 0.1em;
+}
+
+#jackpot_ssilos_halfscreen6{
+	top:7%;
+	color: #fe8db4;
+}
+#jackpot_ssilos_halfscreen5{
+	top:31.75%;
+	color: #a6f2b6;
+}
+#jackpot_ssilos_halfscreen4{
+	top:31.75%;
+	color: #a6f2b6;
+}
+#jackpot_ssilos_halfscreen3{
+	top:56.5%;
+	color: #fecab7;
+}
+#jackpot_ssilos_halfscreen2{
+	top:56.5%;
+	color: #fecab7;
+}
+#jackpot_ssilos_halfscreen1{
+	top:81.25%;
+	color: #7cf6f5;
+}
+#jackpot_ssilos_halfscreen0{
+	top:81.25%;
+	color: #7cf6f5;
+}
+
+#jackpot0 {
+	position:absolute;
+	top:0.7vh;
+	left:28.3vw;
+	z-index:500;
+}
+#jackpot1 {
+	position:absolute;
+	top:0.7vh;
+	left:28.3vw;
+	z-index:500;
+}
+#jackpot2 {
+	position:absolute;
+	top:0.7vh;
+	left:48.3vw;
+	z-index:500;
+}
+
+#jackpot3 {
+	position:absolute;
+	top:0.7vh;
+	left:48.3vw;
+	z-index:500;
+}
+#jackpot4 {
+	position:absolute;
+	top:0.7vh;
+	left:68.3vw;
+	z-index:500;
+}
+#jackpot5 {
+	position:absolute;
+	top:0.7vh;
+	left:68.3vw;
+	z-index:500;
+}
+
+#jackpot6 {
+	position:absolute;
+	top:0.7vh;
+	left:88.3vw;
+	z-index:500;
+}
+
+.jackpotMobileVertical{
+	z-index:500;
+	width: 24%;
+	color: white;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	display: inline-flex;
+	font-size: 2.75vh;
+}
+#jackpotMobileVertical0 {
+	background: url(/images/ssilos/lobby/images/themes/deluxe/mobile/gran-13/gran-02.png) no-repeat center;
+	background-size: 100% 100%;
+}
+#jackpotMobileVertical1 {
+	background: url(/images/ssilos/lobby/images/themes/deluxe/mobile/gran-13/gran-02.png) no-repeat center;
+	background-size: 100% 100%;
+}
+#jackpotMobileVertical2 {
+	background: url(/images/ssilos/lobby/images/themes/deluxe/mobile/gran-13/gran-03.png) no-repeat center;
+	background-size: 100% 100%;
+}
+#jackpotMobileVertical3 {
+	background: url(/images/ssilos/lobby/images/themes/deluxe/mobile/gran-13/gran-03.png) no-repeat center;
+	background-size: 100% 100%;
+}
+#jackpotMobileVertical4 {
+	background: url(/images/ssilos/lobby/images/themes/deluxe/mobile/gran-13/gran-04.png) no-repeat center;
+	background-size: 100% 100%;
+}
+#jackpotMobileVertical5 {
+	background: url(/images/ssilos/lobby/images/themes/deluxe/mobile/gran-13/gran-04.png) no-repeat center;
+	background-size: 100% 100%;
+}
+#jackpotMobileVertical6 {
+	background: url(/images/ssilos/lobby/images/themes/deluxe/mobile/gran-13/gran-05.png) no-repeat center;
+	background-size: 100% 100%;
+}
+
+.jackpotMobileLandscape{
+	z-index:500;
+	width: 18%;
+	color: white;
+	text-align: center;
+	/* justify-content: center;
+	align-items: center;
+	display: inline-flex; */
+	font-size: 4.5vh;
+	font-weight: 900;
+}
+
+.sub_jackpotMobileLandscape{
+	width: 53%;
+	position: relative;
+	left: 44%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#jackpotMobileLandscape0 {
+	background: url(/images/ssilos/lobby/images/themes/deluxe/mobile/gran-13/gran-10.png) no-repeat center;
+	background-size: 100% 100%;
+}
+#jackpotMobileLandscape1 {
+	background: url(/images/ssilos/lobby/images/themes/deluxe/mobile/gran-13/gran-10.png) no-repeat center;
+	background-size: 100% 100%;
+}
+#jackpotMobileLandscape2 {
+	background: url(/images/ssilos/lobby/images/themes/deluxe/mobile/gran-13/gran-11.png) no-repeat center;
+	background-size: 100% 100%;
+}
+#jackpotMobileLandscape3 {
+	background: url(/images/ssilos/lobby/images/themes/deluxe/mobile/gran-13/gran-11.png) no-repeat center;
+	background-size: 100% 100%;
+}
+#jackpotMobileLandscape4 {
+	background: url(/images/ssilos/lobby/images/themes/deluxe/mobile/gran-13/gran-12.png) no-repeat center;
+	background-size: 100% 100%;
+}
+#jackpotMobileLandscape5 {
+	background: url(/images/ssilos/lobby/images/themes/deluxe/mobile/gran-13/gran-12.png) no-repeat center;
+	background-size: 100% 100%;
+}
+#jackpotMobileLandscape6 {
+	background: url(/images/ssilos/lobby/images/themes/deluxe/mobile/gran-13/gran-13.png) no-repeat center;
+	background-size: 100% 100%;
+}
+
+.digit-separator {
+	background-image: url(/images/ssilos/src/js_src/jackpot_toolbar/images/digit_separator.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-size:100% 100%;
+	position: relative;
+	float: left;
+	width: 1.03vw;
+	height: 5vh;
+	overflow: hidden;
+}
+.digit-space {
+	/* background-image: url(/images/ssilos/src/js_src/jackpot_toolbar/images/digit_space.png); */
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-size:100% 100%;
+}
+.digit {
+	background-image:url(/images/ssilos/src/js_src/jackpot_toolbar/images/digits.png);
+	background-size:100% 100%;
+}
+
+.ssilos_bg{
+    background-image:url(/images/ssilos/lobby/images/themes/deluxe/bg.jpg);
+	background-size:100% 100%;
+    font-family: 'Anton', sans-serif;
+}
+
+input.bottomStandFindInput::placeholder {
+    font-family: 'Anton', sans-serif;
+	text-align: center;
+}
+
+.ssilos_jackpot_verticalScreen{
+	border: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 50%;
+	background-size: 100% 100%;
+    background-image:url(/images/ssilos/lobby/images/themes/deluxe/jackpot_bar-ssilos.png);
+}

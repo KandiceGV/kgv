@@ -1,0 +1,1197 @@
+
+
+.vertical .background {
+    background: url(../images/avt_back.png) 36% 0 no-repeat, url(../images/avt_back.png) 100% 100% no-repeat;
+    background-size: 170% 50%;
+}
+
+
+.vertical .wheel-button {
+    left: -6.5vh;
+    bottom: unset;
+    width: 17vh;
+    top: 39vh;
+    height: 17vh;
+}
+
+
+.vertical .wheel-button:before {
+    width: 78%;
+    height: 59%;
+    top: -17%;
+    transform: rotate(0deg);
+}
+
+
+.vertical .top {
+    height: 10vh;
+    bottom: 4.3vh;
+}
+
+
+.vertical .top .slick-slide {
+    width: 17vw;
+}
+
+
+.vertical .top-games a {
+    width: 23vw;
+}
+
+
+.vertical.authorized .spin-logo, body:not(.no-authorize).vertical .spin-logo {
+    top: 7%;
+    width: 20vh;
+    height: 17vh;
+    left: calc(50% - 10vh);
+    animation: spin-logo-vertical 4s linear infinite;
+}
+
+
+@keyframes spin-logo-vertical {
+    0% {
+        transform: translateX(4%);
+    }
+
+
+.vertical .head {
+    top: 9.6vh;
+    /* width: 6vw; */
+}
+
+
+.vertical .head > div {
+    width: 4vh;
+    height: 4vh;
+    /* top: -0.5vh; */
+    margin-bottom: 1.5vmax;
+}
+
+
+.vertical .head_button div {
+    font-size: 2vh;
+}
+
+
+.vertical .balance-and-bonuse {
+    width: 110%;
+    left: calc(50% - 55%);
+    top: .5vmax;
+}
+
+
+.vertical .head_button--sound {
+    /* top: 1.5vh;
+    width: 3.6vmax;
+    height: 3vmax; */
+}
+
+
+.vertical .head_button--screen {
+    /* width: 3.6vmax;
+    height: 3.2vmax;
+    margin-bottom: 0; */
+}
+
+
+.vertical .provider-arrows div {
+    width: 3.5vmax;
+    height: 8vmax;
+    top: calc(50% - 4vmax);
+}
+
+
+.mobile .vertical .provider-arrows div {
+    width: 3vmax;
+    height: 7vmax;
+    top: calc(50% - 3.5vmax);
+}
+
+
+.mobile .vertical .game_control {
+    width: 3vmax;
+    height: 7vmax;
+    top: calc(50% - 3.5vmax);
+}
+
+
+.provider {
+    display: inline-block;
+    height: 100%;
+    background: center center no-repeat;
+    background-size: 100% 100%;
+    vertical-align: top;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase
+}
+
+
+.vertical .tablets:after, .vertical .tablets:before {
+    height: 92%;
+}
+
+
+.vertical .tablets {
+    top: 23.5%;
+    left: calc(50% - 20.5vh);
+    width: 68%;
+    height: 34%;
+    max-width: 41vh;
+    padding-top: 2.3vh;
+}
+
+
+.iphone .vertical .tablets {
+    left: calc(50% - 15.5vh);
+    width: 31vh;
+}
+
+
+.vertical .tablets .jack-top {
+    height: 8vh;
+    top: -4vh;
+}
+
+
+.vertical .tablets .jack-top:before {
+    left: -2.5vh;
+    height: 4vh;
+    width: 4vh;
+}
+
+
+.vertical .tablets .jack-top:after {
+    right: -2.5vh;
+    height: 4vh;
+    width: 4vh;
+}
+
+
+.vertical .tablets .jack-bottom:after {
+    content: "";
+    display: block;
+    background: url(../images/drak.png);
+    right: -2.5vh;
+    bottom: -3%;
+    height: 4vh;
+    width: 4vh;
+    position: absolute;
+    background-size: contain;
+    z-index: 2;
+}
+
+
+.vertical .tablets .jack-bottom:before {
+    content: "";
+    display: block;
+    background: url(../images/drak.png);
+    left: -2.5vh;
+    bottom: -3%;
+    height: 4vh;
+    width: 4vh;
+    position: absolute;
+    background-size: contain;
+}
+
+
+.vertical #games:after {
+    width: 100%;
+    height: 44%;
+    top: 5%;
+    left: 0;
+}
+
+
+.vertical .table {
+    margin: 0 auto .3vh;
+    height: 13%;
+}
+
+
+.vertical .table .label {
+    font-size: 2vh;
+    line-height: 4vh;
+}
+
+
+.vertical .table .odometer-digits {
+    font-size: 2vh;
+    line-height: 3vh;
+}
+
+
+.vertical .providers_slider {
+    top: unset;
+    bottom: 6%;
+    left: calc(50% - 26vmax);
+    height: 43.833%;
+    width: 95%;
+    max-width: 52vmax;
+}
+
+
+.mobile .vertical .providers_slider {
+    left: calc(50% - 40%);
+    bottom: 9%;
+    width: 80%;
+    height: 40.833%;
+}
+
+
+.vertical .game_control {
+    width: 3.5vmax;
+    height: 9vmax;
+    top: calc(50% - 4.5vmax);
+}
+
+
+@media screen and (max-width:1366px) {
+    .desctop body:not(.vertical) .games_inner .slick-slide>div {
+        height: 18vmax;
+    }
+}
+
+
+.vertical .footer {
+    height: 3.5vh;
+    bottom: 0;
+}
+
+
+.iphone .vertical .footer {
+    bottom: 1vh;
+}
+
+
+.vertical .footer_linee {
+    left: calc(50% - 45%);
+    width: 90%;
+    height: 4.222vh;
+}
+
+
+.iphone .vertical .footer_linee {
+    height: 5.2vh;
+    left: calc(50% - 42.5%);
+    width: 85%;
+}
+
+
+.vertical .footer_linee:before {
+    left: -5vh;
+}
+
+
+.iphone .vertical .footer_linee:before {
+    left: -6vh;
+}
+
+
+.iphone .vertical .footer_linee:after {
+    right: -6vh;
+}
+
+
+.vertical .footer_linee:after {
+    right: -5vh;
+}
+
+
+.vertical .footer-left .footer_link, .vertical .footer-right .footer_link {
+    margin: 0 .7vh;
+}
+
+
+.mobile .vertical .footer-left .footer_link, .mobile .vertical .footer-right .footer_link {
+    margin: 0 .6vh;
+}
+
+
+.vertical .footer-left .footer_link--new {
+    margin-left: 2vh;
+}
+
+
+.vertical .footer-left {
+    width: 37%;
+    margin-right: auto;
+    height: 100%;
+}
+
+
+.vertical .footer-right {
+    width: 37%;
+    margin-left: auto;
+    height: 100%;
+}
+
+
+.vertical .footer_link {
+    font-size: 2vh;
+}
+
+
+.vertical:not(.authorized) .footer_link {
+    font-size: 1.7vh;
+    line-height: 1.7vh;
+    text-align: right;
+}
+
+
+.mobile .vertical:not(.authorized) .footer_link {
+    font-size: 1.6vh;
+}
+
+
+.vertical a.footer_link {
+    line-height: 2.5vh;
+}
+
+
+.vertical .footer_link--info {
+    font-size: 0;
+    margin-right: 1vh !important;
+}
+
+
+.vertical .footer_link--account .link-name.before-login {
+    max-width: 17vh;
+}
+
+
+.mobile .vertical .footer_link--account .link-name.before-login {
+    max-width: 12vh;
+}
+
+
+.vertical .footer_link--account .link-name.before-login span {
+    display: none;
+}
+
+
+.authorized.vertical .footer_link--account {
+    font-size: 0;
+    margin-right: 1vh !important;
+}
+
+
+.link-name {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+
+.vertical .footer_link:not(.footer_link--logout) .link-name:not(.before-login) {
+    display: none;
+}
+
+
+.footer_link--top .link-icon {
+    display: inline-block;
+    background: url(../images/top_icon.png);
+    width: 3vw;
+    max-width: 3vmax;
+    height: 4.5vh;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+
+
+.vertical .footer_link--top .link-icon {
+    width: 5vw;
+    height: 3vh;
+}
+
+
+.footer_link--new .link-icon {
+    display: inline-block;
+    background: url(../images/new_icon.png);
+    width: 3vw;
+    max-width: 3vmax;
+    height: 4.5vh;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+
+
+.vertical .footer_link--new .link-icon {
+    width: 6vw;
+    height: 3vh;
+}
+
+
+.footer_link--favourite .link-icon {
+    display: inline-block;
+    background: url(../images/star1.png);
+    width: 3vw;
+    max-width: 3vmax;
+    height: 4.5vh;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+
+
+.vertical .footer_link--favourite .link-icon {
+    width: 3.5vmax;
+    height: 3vmax;
+}
+
+
+.footer_link--info .link-icon {
+    display: inline-block;
+    background: url(../images/info_icon.png);
+    width: 3vw;
+    max-width: 3vmax;
+    height: 4.5vh;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+
+
+.vertical .footer_link--info .link-icon {
+    width: 2.6vmax;
+    height: 3vmax;
+}
+
+
+.footer_link--account .link-icon {
+    display: inline-block;
+    width: 2.5vw;
+    max-width: 2.5vmax;
+    height: 4vh;
+    background: url(../images/account.png) no-repeat center;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+
+.vertical .footer_link--account .link-icon {
+    width: 2.6vmax;
+    height: 3vmax;
+}
+
+
+.vertical .footer-menu {
+    padding-top: 0;
+    height: 5.8vh;
+    font-size: 2.5vh;
+    left: calc(50% - 4vh);
+    max-width: 9vh;
+    background-size: auto 150%;
+}
+
+
+.iphone .vertical .footer-menu {
+    height: 7vh;
+    bottom: -.9vh;
+}
+
+
+.footer_link--logout .link-icon {
+    display: inline-block;
+    background: url(../images/exit_icon.png);
+    width: 3vw;
+    max-width: 3vmax;
+    height: 4.5vh;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+
+
+.vertical .footer_link--logout .link-icon {
+    width: 3vmax;
+    height: 3vmax;
+}
+ */
+
+.id-value, .text-id {
+    position: relative;
+    vertical-align: bottom;
+}
+
+
+.mobile .vertical .table .value {
+    height: 70%;
+}
+
+
+.vertical .news-block {
+    width: 100vw;
+    top: -1vh;
+    left: calc(50% - 51vw);
+    background: #000;
+    height: 2vh;
+}
+
+
+.news-block.core-news > div > div {
+    vertical-align: middle;
+}
+
+
+.vertical .news-block div {
+    font-size: 1.5vh;
+    line-height: unset;
+}
+
+
+.vertical #launcher .pop-up {
+    top: 6vh;
+}
+
+
+.vertical .footer .pop-up, .vertical .useronline_bonuses .pop-up {
+    /* left: -62vw; */
+}
+
+
+.mobile .vertical .footer .pop-up, .mobile .vertical .useronline_bonuses .pop-up {
+    width: 95vw;
+    /* left: -22vw; */
+}
+
+
+.mobile .vertical .footer .pop-up::before, .mobile .vertical .useronline_bonuses .pop-up::before {
+    left: 18.5%;
+    bottom: -2.9vh;
+}
+
+
+.mobile .vertical .footer .pop-up, .mobile .vertical .useronline_bonuses .pop-up {
+    font-size: 3.8vw;
+    line-height: 3.8vw;
+}
+
+
+.vertical .footer_link.active .bonuses-button:before {
+    left: calc(50% - 2vh);
+}
+
+
+.vertical .provider:before {
+    top: 2.5vh;
+    border-radius: 1vh;
+}
+
+
+.mobile .vertical .provider:before {
+    top: 2.1vh;
+}
+
+
+.iphone .vertical .provider:before {
+    top: 1.8vh;
+}
+
+.vertical .provider[provider="yggdrasil"]:before {
+    box-shadow: 0 0 1vh 0.3vh #b713df;
+}
+
+.vertical .provider[provider="apex"]:before {
+    box-shadow: 0 0 1vh 0.3vh #c0af0e;
+}
+
+.vertical .provider[provider="scientific_games"]:before {
+    box-shadow: 0 0 1vh 0.3vh #24f115;
+}
+
+.vertical .provider[provider="pragmatic"]:before {
+    box-shadow: 0 0 1vh 0.3vh #24f115;
+}
+
+.vertical .provider[provider="vegas"]:before {
+    box-shadow: 0 0 1vh 0.3vh #e62910;
+}
+
+.vertical .provider[provider="bingo"]:before {
+    box-shadow: 0 0 1vh 0.3vh #00f0ff;
+}
+
+.vertical .provider[provider="tomhorn"]:before {
+    box-shadow: 0 0 1vh 0.3vh #f5cd0c;
+}
+
+.vertical .provider[provider="cq9"]:before {
+    box-shadow: 0 0 1vh 0.3vh #e35806;
+}
+
+.vertical .provider[game="1537"]:before {
+    box-shadow: 0 0 1vh 0.3vh #0cdff530;
+}
+
+.vertical .provider[game="1106"]:before {
+    box-shadow: 0 0 1vh 0.3vh #e70cf530;
+}
+
+.vertical .provider[provider="fishing"]:before {
+    box-shadow: 0 0 1vh 0.3vh #0f9ebb;
+}
+
+.vertical .provider[game="6507"]:before {
+    box-shadow: 0 0 1vh 0.3vh #0cf51330;
+}
+
+.vertical .provider[game="6510"]:before {
+    box-shadow: 0 0 1vh 0.3vh #0cf51330;
+}
+
+.vertical .provider[provider="live_betting"]:before {
+    box-shadow: 0 0 1vh 0.3vh #01b8c3;
+}
+
+.vertical .provider[provider="table_games"]:before {
+    box-shadow: 0 0 1vh 0.3vh #fa301e;
+}
+
+.vertical .provider[provider="microgaming"]:before {
+    box-shadow: 0 0 1vh 0.3vh #ebc422;
+}
+
+.vertical .provider[provider="aristocrat"]:before {
+    box-shadow: 0 0 1vh 0.3vh #c816f0;
+}
+
+.vertical .provider[provider="novomatic"]:before {
+    box-shadow: 0 0 1vh 0.3vh #2dd938;
+}
+
+.vertical .provider[provider="egt"]:before {
+    box-shadow: 0 0 1vh 0.3vh #d9d304;
+}
+
+.vertical .provider[provider="netent"]:before {
+    box-shadow: 0 0 1vh 0.3vh #1bd8ac;
+}
+
+.vertical .provider[provider="amatic"]:before {
+    box-shadow: 0 0 1vh 0.3vh #0ac007;
+}
+
+.vertical .provider[provider="igt"]:before {
+    box-shadow: 0 0 1vh 0.3vh #17e6dd;
+}
+
+.vertical .provider[provider="wazdan"]:before {
+    box-shadow: 0 0 1vh 0.3vh #b36018;
+}
+
+.vertical .provider[provider="igrosoft"]:before {
+    box-shadow: 0 0 1vh 0.3vh #95e31e;
+}
+
+.vertical .provider[provider="gclub"]:before {
+    box-shadow: 0 0 1vh 0.3vh #d61920;
+}
+
+.vertical .provider[provider="fast_games"]:before {
+    box-shadow: 0 0 1vh 0.3vh #d7d90e;
+}
+
+.vertical .provider[provider="quickspin"]:before {
+    box-shadow: 0 0 1vh 0.3vh #44ee18f7;
+}
+
+
+.vertical .top-panel {
+    height: 4.5vmax;
+    width: 77%;
+    left: calc(50% - 37.5%);
+}
+
+
+.vertical.news-enable .top-panel {
+    top: 1vh;
+}
+
+
+.vertical .top_info_panel .time-panel {
+    top: 3.7vmax;
+    left: calc(50% - 40vw);
+    width: 78.5vw;
+}
+
+
+.vertical .time-panel div {
+    width: 17.8vmax;
+    height: 4.1vmax;
+    padding: 1.8vmax 1vmax 0.5vmax 4vmax;
+}
+
+
+.vertical .hours_status .time-panel-name {
+    font-size: .7vh;
+}
+
+
+.vertical .wager_status .time-panel-name {
+    font-size: .8vh;
+}
+
+
+.vertical .freespins-mark {
+    width: 11vh;
+    height: 2.7vh;
+    padding-top: .5vh;
+    top: 7.5%;
+    left: calc(50% - 5.5vh);
+}
+
+
+.vertical .freespins-mark-text {
+    font-size: 1.2vh;
+}
+
+
+.mobile .vertical .freespins-mark {
+    -top: 1vh;
+}
+
+
+.mobile .vertical .account-info {
+    font-size: 2vh;
+}
+
+
+.banner-inner h1 {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 8.5vh);
+    margin: 0;
+    font-size: 2.5vh;
+}
+
+
+.reg .reg_rulesspan {
+    vertical-align: top;
+}
+
+
+.mobile .vertical .account_content p, .mobile .vertical .account_content input:not([type=submit]), .mobile .vertical .account_content select, .mobile .vertical .account_password, .mobile .vertical .account-wrap .edit-account-data, .mobile .vertical .account-password-form {
+    font-size: 2vh;
+}
+
+
+.mobile .vertical .account_menu .menu-item {
+    font-size: 2vh;
+}
+
+
+.mobile .vertical .account_menu .menu-item {
+    /* padding: 4vh 0 4vh 6vh; */
+}
+
+
+.mobile .vertical .account_content .field-title, .mobile .vertical .account_content .bonuses-values .bonuse-word-wrap {
+    width: 20vh;
+}
+
+
+.mobile .vertical .account_content input:not([type=submit]):not(#tel):not(#account-promocode), .mobile .vertical .account_content select {
+    width: 100%;
+    max-width: 20vh;
+}
+
+
+.mobile .vertical .account_content #tel {
+    max-width: 24vh;
+    min-width: 20vh;
+}
+
+
+.mobile .vertical .account_content .change-password-inputs input#old-password, .mobile .vertical .account_content .change-password-inputs input#new-password {
+    max-width: 100%;
+}
+
+
+/* languages block */
+
+.languages {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 5vh;
+    height: 3.5vh;
+}
+
+
+.mobile .vertical .account_content {
+    padding: 0;
+}
+
+
+.mobile .vertical .account-info .download>div>p {
+    font-size: 2vh;
+}
+
+
+.mobile .vertical .account-info .download>div>p {
+    font-size: 2vh;
+}
+
+
+.mobile .vertical .account-wrap .account_content .deposit-fields {
+    flex-wrap: wrap;
+}
+
+
+.mobile .vertical .account-wrap .account_content .account_block_balances .account-password-form .change-password-inputs label {
+    width: 95%;
+}
+
+
+.account-wrap .payment_rules_label:before, .reg .reg_rules:before {
+    content: '';
+    position: relative;
+    margin-right: .5vh;
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.9vh;
+    height: 1.9vh;
+    transition: transform .28s ease;
+    border-radius: .4vh;
+    border: 2px solid #FFCE00;
+    background: rgb(171, 101, 0);
+    background: linear-gradient(141deg, rgba(171, 101, 0, 1) 0%, rgba(96, 43, 2, 1) 100%);
+}
+
+
+.mobile .vertical .account-wrap .form-text {
+    font-size: 1.5vh;
+}
+
+
+.vertical .dropdown-languages-wrap {
+    /* top: 1.5vh;
+    width: 3.6vmax; */
+}
+
+
+.vertical .dropdown-languages-wrap .dropdown-languages .select-language.active, .vertical .dropdown-languages-wrap .dropdown-languages .select-language.selected {
+    height: 3.5vh;
+}
+
+
+.vertical .dropdown-languages-wrap .dropdown-languages .select-language .lang-img {
+    height: 1.8vh;
+}
+
+
+.vertical .head_button--footer span {
+    font-size: 3vh;
+}
+
+
+.mobile .vertical #account-promo-form .account-field-wrap {
+    width: 19vh;
+}
+
+
+/* vertical games */
+.desktop .vertical #games {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+.desktop .vertical #launcher.content-active {
+    position: absolute;
+    top: unset;
+    bottom: 0;
+    height: 47%;
+}
+
+
+.desktop .vertical:not(.vertical-game) .jackpots-active .launcher-game-block {
+    height: calc(100% - 33px) !important;
+}
+
+
+.desktop body.vertical.vertical-game #launcher {
+    top: 0px;
+    height: 100%;
+}
+
+    /* vertical account */
+    .account .banner-inner {
+        min-height: 68vh;
+        overflow: auto;
+    }
+
+    .mobile .vertical .providers_slider {
+        left: calc(50% - 43%);
+        width: 86%;
+        bottom: 7.5%;
+    }
+ */
+    /* .vertical .freespins-mark {
+        top: 1.3vh;
+    }
+
+    .mobile .vertical .tablets {
+        left: calc(50% - 16.5vh);
+        width: 33vh;
+    }
+
+    .vertical .games_slider {
+        top: 50%;
+        left: calc(50% - 25vh);
+        height: 42.833%;
+        width: 50vh;
+    }
+
+    .iphone .vertical .games_slider {
+        left: calc(50% - 21vh);
+        width: 43vh;
+        top: 53%;
+        height: 36%;
+    }
+
+    .iphone .vertical .page-number {
+        bottom: -8.3%;
+    }
+
+    .iphone .vertical .footer_link--id {
+        line-height: 5vh;
+    }
+
+    .vertical .footer_link--new .link-icon, .vertical .footer_link--top .link-icon, .vertical .footer_link--favourite .link-icon, .vertical .footer_link--info .link-icon, .vertical .footer_link--logout .link-icon, .footer_link--new .link-icon, .footer_link--top .link-icon, .footer_link--favourite .link-icon, .footer_link--info .link-icon, .footer_link--logout .link-icon {
+        width: 4vw;
+        max-width: 4vmax;
+    }
+
+    .vertical .footer_link--new .link-icon, .vertical .footer_link--top .link-icon, .vertical .footer_link--favourite .link-icon, .vertical .footer_link--info .link-icon, .vertical .footer_link--logout .link-icon {
+        max-width: 3vmax;
+    }
+
+    .vertical .footer-menu:before {
+        left: -3.5vh;
+    }
+
+    .vertical .footer-menu:after {
+        right: -3.5vh;
+    }
+
+    .vertical .footer .pop-up, .vertical .useronline_bonuses .pop-up {
+        bottom: 6vh;
+        /* left: -16vw; */
+    }
+
+    .vertical .footer .pop-up::before, .vertical .useronline_bonuses .pop-up::before {
+        left: 15.5%;
+        bottom: -2.9vh;
+    }
+
+    /* .vertical.old-wager .footer .useronline_bonuses .pop-up {
+        bottom: -87vh;
+        left: -63vw;
+    }
+
+    .iphone .vertical.old-wager .footer .useronline_bonuses .pop-up {
+        bottom: -73vh;
+        left: -62vw;
+    }
+
+
+@media screen and (max-aspect-ratio: 9/16) {
+    .vertical .tablets {
+        left: calc(50% - 34%);
+    }
+
+    .vertical .providers_slider {
+        left: calc(50% - 42%);
+        width: 84%;
+    }
+
+    .mobile .vertical .providers_slider {
+        left: calc(50% - 41%);
+        width: 82%;
+    }
+
+    .vertical .games_slider {
+        left: calc(50% - 21.5vmax);
+        width: 43vmax;
+    }
+
+    .vertical .provider-arrows {
+        width: calc(100% + 12vw);
+        right: -6vw;
+    }
+
+    .vertical .footer_link--new .link-icon, .vertical .footer_link--top .link-icon, .vertical .footer_link--favourite .link-icon, .vertical .footer_link--info .link-icon, .vertical .footer_link--logout .link-icon, .footer_link--new .link-icon, .footer_link--top .link-icon, .footer_link--favourite .link-icon, .footer_link--info .link-icon, .footer_link--logout .link-icon {
+        width: 5.5vw;
+    }
+
+    .vertical .footer-left .footer_link, .vertical .footer-right .footer_link {
+        margin: 0 .3vh;
+    }
+
+    .vertical .footer-left .footer_link--new {
+        margin-left: 0vh;
+    }
+
+    .mobile .vertical .footer_link .link-name {
+        font-size: 1.5vh;
+    }
+
+    .vertical .footer-left .footer_link, .vertical .footer-right .footer_link {
+        margin: 0 .7vh;
+    }
+
+    /* .mobile .vertical .footer-left .footer_link, .vertical .footer-right .footer_link {
+        margin: 0 1vh;
+    }
+ */
+    .mobile .vertical .games_slider {
+        left: calc(50% - 19vh);
+        width: 38vh;
+    }
+
+    /* .mobile .vertical .footer .pop-up {
+        left: -68vw;
+    }
+
+    .mobile .vertical .footer .pop-up::before {
+        left: 80%;
+    }
+
+    .mobile .vertical.authorized .spin-logo, .mobile body:not(.no-authorize).vertical .spin-logo {
+        width: 14vh;
+        height: 13vh;
+    }
+
+    .mobile .vertical .providers_slider {
+        left: calc(50% - 39%);
+        width: 78%;
+        height: 38.833%;
+        bottom: 9.5%;
+    }
+
+    .mobile .vertical .games_slider {
+        top: 53%;
+        left: calc(50% - 20vh);
+        height: 37.833%;
+        width: 40vh;
+    }
+
+    .iphone .vertical .games_slider {
+        left: calc(50% - 18vh);
+        width: 36vh;
+        top: 51.5%;
+    }
+
+    .vertical .footer_link .link-icon {
+        width: 5vw;
+    }
+
+    .iphone .vertical .page-number {
+        bottom: -7%;
+    }
+
+    .mobile .vertical .games_inner .slick-slide>div {
+        max-height: 24%;
+    }
+
+    .iphone .vertical .games_inner .slick-slide>div {
+        max-height: 28%;
+    }
+
+    .mobile .vertical .footer_link--info, .mobile .vertical .footer_link--logout {
+        /* margin: 0; */
+    }
+
+    .vertical .freespins-mark {
+        width: 9vh;
+        height: 2.2vh;
+        left: calc(50% - 4.5vh);
+        padding-top: .2vh;
+    }
+
+    .vertical .freespins-mark-text {
+        font-size: 1vh;
+    }
+
+
+@media screen and (min-aspect-ratio: 9/18) and (max-aspect-ratio: 9/16) {
+    .mobile .vertical.authorized .spin-logo, .mobile body:not(.no-authorize).vertical .spin-logo {
+        top: 7.5%;
+        width: 15vh;
+        height: 13vh;
+    }
+
+    .vertical .games_slider {
+        left: calc(50% - 21.5vh);
+        width: 43vh;
+        top: 50.5%;
+    }
+
+    .mobile .vertical .games_slider {
+        left: calc(50% - 20vh);
+        width: 40vh;
+        top: 52.5%;
+        height: 39.833%;
+    }
+
+    .vertical .freespins-mark {
+        top: 1.3vh;
+        padding-top: .4vh;
+    }
+
+
+    .mobile .vertical .freespins-mark {
+        top: 0.5vh;
+    }
+
+
+@media screen and (min-aspect-ratio: 2/3) and (max-aspect-ratio: 3/4) {
+    .mobile .vertical .providers_slider {
+        left: calc(50% - 35%);
+        width: 70%;
+        bottom: 9%;
+    }
+
+    .mobile .vertical .games_slider {
+        top: 53%;
+        height: 35.833%;
+        left: calc(50% - 21vh);
+        width: 42vh;
+    }
+
+    .mobile .vertical .page-number {
+        bottom: -9.3%;
+    }
+
+    .mobile .vertical .games_inner .slick-slide>div {
+        max-height: 40%;
+    }
+
+    .iphone .vertical .games_inner .slick-slide>div {
+        max-height: 22%;
+    }
+
+
+@media screen and (max-width:375px) {
+    .vertical.authorized .spin-logo, .body:not(.no-authorize).vertical .spin-logo {
+        width: 13vh;
+        height: 12vh;
+        left: calc(50% - 5.5vh);
+    }
+
+
+/* .vertical .social-buttons {
+    bottom: 40.5vh;
+}
+ */
+
+.mobile .vertical .social-buttons {
+    bottom: 44vh;
+}
+
+
+/* .mobile .vertical .social-buttons .social-button {
+    width: 4vh;
+    height: 4vh;
+    margin-top: 1vh;
+}
