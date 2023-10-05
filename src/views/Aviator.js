@@ -477,12 +477,18 @@ const Aviator = () => {
 
     setAviatorStartedWebsite(updatedUrl);
 
+    await StoreInLocalStorageGoldValley();
+
     set_Current_Game({
       variables: {
         id: data_user.users[0].id,
         current_game: "aviator",
       },
     });
+  };
+
+  const StoreInLocalStorageGoldValley = () => {
+    localStorage.setItem("PageThatCameFrom", "aviator");
   };
 
 

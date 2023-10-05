@@ -55,43 +55,43 @@ export const killIntervalRunningCurrentGame = () => {
 
 const GAMES_QUERY = gql`
   query GamesQuery {
-      gv_games(
-        order_by: { pname: asc_nulls_last }
-        where: { is_disabled: { _eq: false } }
-      ) {
+    gv_games(
+      order_by: { pname: asc_nulls_last }
+      where: { is_disabled: { _eq: false } }
+    ) {
+      id
+      pname
+      image
+      code
+    }
+    games(
+      order_by: { gp_game_category: asc_nulls_last }
+      where: { is_disabled: { _eq: false } }
+    ) {
+      id
+      gp_game_category
+      gp_game_image
+      gp_game_menu_title
+      gp_game_mobile
+    }
+    users {
+      id
+      shop {
         id
-        pname
-        image
-        code
-      }
-      games(
-        order_by: { gp_game_category: asc_nulls_last }
-        where: { is_disabled: { _eq: false } }
-      ) {
-        id
-        gp_game_category
-        gp_game_image
-        gp_game_menu_title
-        gp_game_mobile
-      }
-      users {
-        id
-        shop {
-          id
-          disabled_games
-          lobby
-          is_aviator_enabled
-        }
-      }
-      settings(order_by: { id: asc }) {
-        value
-        json_value
-      }
-      game_categories(order_by: { id: asc }) {
-        id
+        disabled_games
         lobby
-        categories
+        is_aviator_enabled
       }
+    }
+    settings(order_by: { id: asc }) {
+      value
+      json_value
+    }
+    game_categories(order_by: { id: asc }) {
+      id
+      lobby
+      categories
+    }
   }
 `;
 
@@ -228,15 +228,11 @@ const Home = () => {
     },
   ]);
 
-
-
   const myAudio = useRef(new Audio(the_sound));
   myAudio.loop = true;
 
   const { refetch: refetch_games } = useQuery(GAMES_QUERY, {
     onCompleted: async (the_data) => {
-
-
       if (GameStarted) {
         console.log("Game has Started!!!");
         return;
@@ -283,7 +279,6 @@ const Home = () => {
 
       let all_the_games = [];
 
-
       let is_mobile;
       const navigator = window.navigator.userAgent;
       if (
@@ -300,27 +295,19 @@ const Home = () => {
         is_mobile = false;
       }
 
-
-
       if (the_query_games_categories !== null) {
-
         let the_category_title = "";
         let the_category_general = [];
         let the_game_id = -1;
 
-
         for (let b = 0; b < the_query_games_categories.length; b++) {
           the_category_title = the_query_games_categories[b].Category_Label;
-          if (
-            the_category_title.toLowerCase() !== "all games"
-          ) {
+          if (the_category_title.toLowerCase() !== "all games") {
             continue;
           }
           the_category_general = the_query_games_categories[b].Game_Ids;
 
           all_the_games = [];
-
-
 
           for (let x = 0; x < the_category_general.length; x++) {
             the_game_id = the_category_general[x];
@@ -357,8 +344,6 @@ const Home = () => {
                 continue;
               }
 
-        
-
               let tmp_game = { ...the_games[i] };
 
               all_the_games.push(tmp_game);
@@ -366,22 +351,21 @@ const Home = () => {
               // break;
             }
           }
-
         }
 
         setGoldValleyGames([...all_the_games]);
         SingleAllTheGames = [...all_the_games];
       }
 
-      let coming_from_game = await localStorage.getItem("GoldValleyCategoryIndex");
+      let coming_from_game = await localStorage.getItem(
+        "GoldValleyCategoryIndex"
+      );
 
       if (coming_from_game !== undefined && coming_from_game !== null) {
-        setGoldValleyCategoryIndex(parseInt(coming_from_game))
+        setGoldValleyCategoryIndex(parseInt(coming_from_game));
       }
 
-    
       setLoadingReady2(true);
-
     },
     onError: (err) => {
       console.log(err);
@@ -411,10 +395,7 @@ const Home = () => {
 
       const the_shop = data.users[0].shop;
 
-
-      if (
-        the_shop.lobby !== "online"
-      ) {
+      if (the_shop.lobby !== "online") {
         alert("User not found in this lobby!");
         returnEverythingToNormal();
         return;
@@ -470,7 +451,6 @@ const Home = () => {
     pollInterval: 1000,
   });
 
-
   useQuery(JACKPOT_QUERY, {
     variables: {
       jackpot_ids: Jackpot_Ids,
@@ -499,7 +479,6 @@ const Home = () => {
       }
 
       setTheJackpotValues(the_jackpot_values);
-
     },
     onError: (err) => {
       console.log(err);
@@ -510,7 +489,6 @@ const Home = () => {
     pollInterval: 1000,
   });
 
-
   const [set_Update_Time_Current_Game] = useMutation(
     UPDATE_TIME_CURRENT_GAME_MUTATION,
     {
@@ -520,7 +498,6 @@ const Home = () => {
     }
   );
   const [set_Current_Game] = useMutation(CURRENTGAME_MUTATION);
-
 
   useEffect(
     () => {
@@ -573,18 +550,26 @@ const Home = () => {
 
   useEffect(
     () => {
-      let GoldValleyGames_name = "GoldValleyGames_" + GoldValleyCategoryIndex
-      if(document.getElementById(GoldValleyGames_name) && GoldValleyCategoryIndex !== -1 && !GameStarted){
-        document.getElementById(GoldValleyGames_name).scrollIntoView({ behavior: 'smooth' });
-        setGoldValleyCategoryIndex(-1)
+      let GoldValleyGames_name = "GoldValleyGames_" + GoldValleyCategoryIndex;
+      if (
+        document.getElementById(GoldValleyGames_name) &&
+        GoldValleyCategoryIndex !== -1 &&
+        !GameStarted
+      ) {
+        document
+          .getElementById(GoldValleyGames_name)
+          .scrollIntoView({ behavior: "smooth", block: "center" });
+        setGoldValleyCategoryIndex(-1);
         localStorage.removeItem("GoldValleyCategoryIndex");
       }
     },
     // eslint-disable-next-line
-    [GoldValleyCategoryIndex, document.getElementById("GoldValleyGames_"+ GoldValleyCategoryIndex)]
+    [
+      GoldValleyCategoryIndex,
+      // eslint-disable-next-line
+      document.getElementById("GoldValleyGames_" + GoldValleyCategoryIndex),
+    ]
   );
-  
-
 
   async function returnTheLink(
     game_provider,
@@ -648,7 +633,6 @@ const Home = () => {
 
     return result_ans;
   }
-
 
   async function fetchData() {
     refetchQueries();
@@ -838,7 +822,6 @@ const Home = () => {
   }
 
   const GamesPressedGoldValley = async (index) => {
-
     setGameStarted(true);
 
     const tmp_result = await returnTheLink(
@@ -848,7 +831,6 @@ const Home = () => {
       "en",
       My_website
     );
-
 
     setTheSpecificGameCategory(GoldValleyGames[index].category.toLowerCase());
 
@@ -869,6 +851,7 @@ const Home = () => {
 
   const StoreInLocalStorageGoldValley = (index) => {
     localStorage.setItem("GoldValleyCategoryIndex", index);
+    localStorage.setItem("PageThatCameFrom", "home");
   };
 
   return (
@@ -895,8 +878,7 @@ const Home = () => {
                   alignItems: "center",
                 }}
               >
-                <span
-                className="toolbar_height"></span>
+                <span className="toolbar_height"></span>
 
                 <div className="AllCategories_goldValley main_screen">
                   <Grid
@@ -1009,7 +991,7 @@ const Home = () => {
                         MAJOR JACKPOT
                       </span>
                       <span className="the_jackpot_second_line">
-                      {TheJackpotValues[1].value + TheCurrency}
+                        {TheJackpotValues[1].value + TheCurrency}
                       </span>
                     </div>
                   </Grid>
@@ -1026,7 +1008,7 @@ const Home = () => {
                         MINOR JACKPOT
                       </span>
                       <span className="the_jackpot_second_line">
-                      {TheJackpotValues[2].value + TheCurrency}
+                        {TheJackpotValues[2].value + TheCurrency}
                       </span>
                     </div>
                   </Grid>
@@ -1043,7 +1025,7 @@ const Home = () => {
                         MINI JACKPOT
                       </span>
                       <span className="the_jackpot_second_line">
-                      {TheJackpotValues[3].value + TheCurrency}
+                        {TheJackpotValues[3].value + TheCurrency}
                       </span>
                     </div>
                   </Grid>
@@ -1068,9 +1050,13 @@ const Home = () => {
                       }}
                     >
                       {GoldValleyGames.map((games, i) => (
-                        <React.Fragment key={i} >
+                        <React.Fragment key={i}>
                           {i % 17 === 3 && TheColumns !== 1 ? (
-                            <ImageListItem id={"GoldValleyGames_"+i} rows={3} cols={2}>
+                            <ImageListItem
+                              id={"GoldValleyGames_" + i}
+                              rows={3}
+                              cols={2}
+                            >
                               <div
                                 title={games.title}
                                 className="game-img_goldValley_outer big"
@@ -1094,7 +1080,11 @@ const Home = () => {
                           ) : (
                             <>
                               {i % 17 === 10 && TheColumns !== 1 ? (
-                                <ImageListItem id={"GoldValleyGames_"+i} rows={2} cols={2}>
+                                <ImageListItem
+                                  id={"GoldValleyGames_" + i}
+                                  rows={2}
+                                  cols={2}
+                                >
                                   <div
                                     title={games.title}
                                     className="game-img_goldValley_outer semibig"
@@ -1116,7 +1106,7 @@ const Home = () => {
                                   </div>
                                 </ImageListItem>
                               ) : (
-                                <ImageListItem id={"GoldValleyGames_"+i}>
+                                <ImageListItem id={"GoldValleyGames_" + i}>
                                   <div
                                     title={games.title}
                                     className="game-img_goldValley_outer"
@@ -1148,10 +1138,7 @@ const Home = () => {
               </div>
             </div>
           ) : (
-            <PreLoader
-            setLoadingReady={setLoadingReady}
-            />
-  
+            <PreLoader setLoadingReady={setLoadingReady} />
           )}
         </>
       ) : (
@@ -1172,17 +1159,16 @@ const Home = () => {
               ></iframe>
             </div>
           </div>
-          {Novomatic_big_Exit &&
-            TheSpecificGameCategory === "novomatic" && (
-              <button
-                className={"NovomaticButtonBigExit"}
-                onClick={() => {
-                  window.location.href = My_website;
-                }}
-              >
-                <span>EXIT</span>
-              </button>
-            )}
+          {Novomatic_big_Exit && TheSpecificGameCategory === "novomatic" && (
+            <button
+              className={"NovomaticButtonBigExit"}
+              onClick={() => {
+                window.location.href = My_website;
+              }}
+            >
+              <span>EXIT</span>
+            </button>
+          )}
         </>
       )}
     </>

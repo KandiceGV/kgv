@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 // import { Link } from 'react-router-dom';
 // import { Col, Container, Input, Row, Button } from "reactstrap";
 // import ParticlesAuth from "./ParticlesAuth";
@@ -90,19 +90,40 @@ const BasicSignIn = () => {
   //   setIsPasswordVisible(!isPasswordVisible);
   // };
 
-  // useEffect(
-  //   () => {
-  //     if ("aviator") ||
-  //     window.location.hostname === "localhost") {
-  //       document.documentElement.classList.add("aviator_a");
-  //     }
-  //     else{
-  //       document.documentElement.classList.remove("aviator_a");
-  //     }
-  //   },
-  //   // eslint-disable-next-line
-  //   []
-  // );
+  useEffect(
+    () => {
+
+      let coming_from_game = localStorage.getItem(
+        "PageThatCameFrom"
+      );
+
+      console.log(coming_from_game)
+
+      switch (coming_from_game) {
+        case "home":
+          window.location.href = "/#/home";
+          break;
+        case "slotgames":
+          window.location.href = "/#/slotgames";
+          break;
+        case "newgames":
+          window.location.href = "/#/newgames";
+          break;
+        case "livegames":
+          window.location.href = "/#/livegames";
+          break;
+        case "aviator":
+          window.location.href = "/#/aviator";
+          break;
+        default:
+          break;
+      }
+      
+      localStorage.removeItem("PageThatCameFrom");
+    },
+    // eslint-disable-next-line
+    []
+  );
 
   return (
 <div id="login" className="content content-active gold-valley">
@@ -154,7 +175,7 @@ const BasicSignIn = () => {
                 </div>
                 <div 
                   style={{color: "white", cursor: "pointer", textAlign: "center", padding: "20px 0px", fontSize: "1.15rem",
-                  "-webkit-text-stroke": "0.03rem #d3b16b"
+                  WebkitTextStroke: "0.03rem #d3b16b"
                 }}
                 onClick={()=>{
                   window.location.href = "/#/signup";

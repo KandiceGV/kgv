@@ -17,6 +17,8 @@ import the_sound from "./sounds/casino_sound.mp3";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ReactInternetSpeedMeter } from "react-internet-meter";
+import "react-internet-meter/dist/index.css";
 
 let intervalRunning = null;
 let intervalRunningCurrentGame = null;
@@ -55,14 +57,8 @@ export const killIntervalRunningCurrentGame = () => {
   }
 };
 
-const liveTables = [
-  "./vivogaming.png",
-  "./xpg.png",
-];
-const liveTablesCategories = [
-  "vivogaming",
-  "xpg",
-];
+const liveTables = ["./vivogaming.png", "./xpg.png"];
+const liveTablesCategories = ["vivogaming", "xpg"];
 
 function importAllSlotGames(r) {
   return liveTables.map(r);
@@ -201,6 +197,8 @@ const LiveGames = () => {
   const [TheRowHeight, setTheRowHeight] = useState(164);
   const [TheColumnsProviders, setTheColumnsProviders] = useState(3);
   const [TheRowHeightProviders, setTheRowHeightProviders] = useState(164);
+  const [WifiSpeed, setWifiSpeed] = useState(0);
+  const [ShowWifiSpeed, setShowWifiSpeed] = useState(false);
 
   const myAudio = useRef(new Audio(the_sound));
   myAudio.loop = true;
@@ -282,7 +280,10 @@ const LiveGames = () => {
 
         for (let b = 0; b < the_query_games_categories.length; b++) {
           the_category_title = the_query_games_categories[b].Category_Label;
-          if (liveTablesCategories.indexOf(the_category_title.toLowerCase()) === -1) {
+          if (
+            liveTablesCategories.indexOf(the_category_title.toLowerCase()) ===
+            -1
+          ) {
             continue;
           }
 
@@ -362,7 +363,11 @@ const LiveGames = () => {
         //setGoldValleyGames([...all_the_games[0]]);
 
         for (let i = 0; i < all_the_games.length; ) {
-          if (all_the_games[i] === undefined || all_the_games[i].length === 0 || game_categories_images[i] === "") {
+          if (
+            all_the_games[i] === undefined ||
+            all_the_games[i].length === 0 ||
+            game_categories_images[i] === ""
+          ) {
             all_the_games.splice(i, 1);
             games_categories.splice(i, 1);
             game_categories_images.splice(i, 1);
@@ -563,7 +568,7 @@ const LiveGames = () => {
       ) {
         document
           .getElementById(GoldValleyGames_name)
-          .scrollIntoView({ behavior: "smooth" });
+          .scrollIntoView({ behavior: "smooth", block: "center" });
         setGoldValleyCategoryIndex(-1);
         KeepLobbyIndex = 0;
         localStorage.removeItem("GoldValleyCategoryIndex");
@@ -829,6 +834,8 @@ const LiveGames = () => {
 
     setFrameUrl(tmp_result);
 
+    setShowWifiSpeed(false);
+
     if (IsMobile) {
       openFullscreen(document.documentElement);
     }
@@ -845,6 +852,7 @@ const LiveGames = () => {
   const StoreInLocalStorageGoldValley = (index) => {
     localStorage.setItem("GoldValleyCategoryIndex", index);
     localStorage.setItem("KeepLobbyIndex", KeepLobbyIndex);
+    localStorage.setItem("PageThatCameFrom", "livegames");
   };
 
   return (
@@ -871,9 +879,7 @@ const LiveGames = () => {
                   alignItems: "center",
                 }}
               >
-                <span
-                  className="toolbar_height"
-                ></span>
+                <span className="toolbar_height"></span>
 
                 <div className="AllCategories_goldValley livegames">
                   <Grid
@@ -895,7 +901,7 @@ const LiveGames = () => {
                         margin: {
                           xs: "75px 0px 0px 0px",
                           sm: "25px 0px 0px 0px",
-                        }
+                        },
                       }}
                       style={{
                         display: "flex",
@@ -1021,6 +1027,53 @@ const LiveGames = () => {
                       <span className="the_jackpot_second_line">
                         {"1234569 GVK"}
                       </span>
+                    </div>
+                  </Grid>
+                  <Grid
+                    item
+                    sm={12}
+                    xs={12}
+                    style={{
+                      paddingTop: "20px",
+                      display: "inline-flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <div className="speedmeter_box">
+                      <div
+                        className="speedmeter"
+                        onClick={() => {
+                          setShowWifiSpeed(!ShowWifiSpeed);
+                          setWifiSpeed(0);
+                        }}
+                      ></div>
+
+                      {ShowWifiSpeed && (
+                        <ReactInternetSpeedMeter
+                          outputType="empty"
+                          pingInterval={2000} // milliseconds
+                          thresholdUnit="megabyte" // "byte" , "kilobyte", "megabyte"
+                          threshold={100}
+                          imageUrl="https://www.sammobile.com/wp-content/uploads/2019/03/keyguard_default_wallpaper_silver.png"
+                          downloadSize="2550420" //bytes
+                          // callbackFunctionOnNetworkDown={(speed)=>{
+                          //   console.log(`Internet speed is down ${speed}`)}
+                          // }
+                          callbackFunctionOnNetworkTest={(speed) => {
+                            setWifiSpeed(speed);
+                          }}
+                        />
+                      )}
+                      <div
+                        style={{
+                          fontSize: "2rem",
+                          fontWeight: "bold",
+                          marginTop: "0px",
+                          color: ShowWifiSpeed ? "white" : "black",
+                        }}
+                      >
+                        {ShowWifiSpeed ? WifiSpeed + " Mbps" : "SPEED TEST"}
+                      </div>
                     </div>
                   </Grid>
                   <Grid

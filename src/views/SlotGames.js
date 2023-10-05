@@ -576,7 +576,7 @@ const SlotGames = () => {
       ) {
         document
           .getElementById(GoldValleyGames_name)
-          .scrollIntoView({ behavior: "smooth" });
+          .scrollIntoView({ behavior: 'smooth', block: 'center' });
         setGoldValleyCategoryIndex(-1);
         KeepLobbyIndex = 0;
         localStorage.removeItem("GoldValleyCategoryIndex");
@@ -858,6 +858,7 @@ const SlotGames = () => {
   const StoreInLocalStorageGoldValley = (index) => {
     localStorage.setItem("GoldValleyCategoryIndex", index);
     localStorage.setItem("KeepLobbyIndex", KeepLobbyIndex);
+    localStorage.setItem("PageThatCameFrom", "slotgames");
   };
 
   return (

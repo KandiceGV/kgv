@@ -12,6 +12,8 @@ html, body {
     background-color: #dbdae8;
 }
 
+
+
 /* .MuiMenu-paper{
     min-width: 1000px !important;
 } */
@@ -194,6 +196,21 @@ input.input.inputLogin {
     background: linear-gradient(0deg, #eeb52f 20%, #ffebb0 60%, #e4bc51 20%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: #90656500;
+}
+
+.speedmeter{
+    background-image: url(/images/goldValley/speedtest_icon.png);
+    background-size: 100% 100%;
+    height: 220px;
+    width: 266px;
+    cursor: pointer;
+}
+
+.speedmeter_box{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0px
 }
 
 
