@@ -12,8 +12,6 @@ html, body {
     background-color: #dbdae8;
 }
 
-
-
 /* .MuiMenu-paper{
     min-width: 1000px !important;
 } */
@@ -56,7 +54,6 @@ button{
     -webkit-text-fill-color: #edc37c !important;
     transition: background-color 99999s ease-in-out 0s;
 }
-
 
 
 .content-active{
@@ -125,7 +122,6 @@ button{
 .submitButtonContainer {
     text-align: center
 }
-
 
 .submitButton {
     /* display: none; */
@@ -199,20 +195,19 @@ input.input.inputLogin {
 }
 
 .speedmeter{
-    background-image: url(/images/goldValley/speedtest_icon.png);
+    background-image: url(/images/goldValley/speedtesticon.png);
     background-size: 100% 100%;
-    height: 220px;
-    width: 266px;
+    height: 50px;
+    width: 230px;
     cursor: pointer;
+    padding-right: 20px;
 }
 
 .speedmeter_box{
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px 0px
 }
-
 
 input.input.inputPassword {
     font-size: 1.5vw;
@@ -440,7 +435,7 @@ input.input::-ms-input-placeholder {
 }
 
 .game-img_goldValley_outer {
-    width: 100%;
+    width: 90%;
     height: 85%;
     border-radius: 15px;
     /* background-size: contain;  old*/
@@ -465,7 +460,7 @@ input.input::-ms-input-placeholder {
 .game-img_goldValley_outer2:before {
     content: '';
     display: block;
-    background: url(/images/goldValley/smallgoldframepng.png) no-repeat center;
+    background: url(/images/goldValley/small_frame.png) no-repeat center;
     background-size: 101% 101%;
     position: absolute;
     width: 100%;
@@ -477,8 +472,8 @@ input.input::-ms-input-placeholder {
 }
 
 .game-img_goldValley_outer2.big:before {
-    background: url(/images/goldValley/squaregoldframe1Png.png) no-repeat center;
-    background-size: 103% 103%;
+    background: url(/images/goldValley/large_frame.png) no-repeat center;
+    background-size: 100% 100%;
 }
 
 .game-img_goldValley.big {
@@ -519,55 +514,143 @@ input.input::-ms-input-placeholder {
 }
 
 
-.gold_Valley_logo{
-	width: 178px;
+.gold_Valley_3dtext{
+	width: 422px;
     height: 100px;
+    margin-left: 30px;
     /* max-width: 10rem; */
     /* max-height: 3rem; */
     /* transform: scale(1.5); */
     position: relative;
-	background: url(/images/goldValley/gvlogo.gif) no-repeat center;
+	background: url(/images/goldValley/gv3dtitle.png) no-repeat center;
 	background-size: 100% 100%;
 }
 
-.toolbar_height{
+/*.toolbar_height {
     width: 100%;
     height: 137px;
-    min-height: 137px;
-}
+    min-height: 100px;
+    background-image: url('/images/goldValley/companies_nav.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+} */
 
-.AllCategories_goldValley{
+.AllCategories_goldValley {
     width: 100%;
     display: inline-flex !important;
-    color: #d7b56c;
+    color: #535353;
     justify-content: space-evenly;
-    /* position: fixed !important; */
-    top: 137px;
-    height: 292px;
-    background: linear-gradient( 0deg, #c9c9c9 0%, #666666 100% ) 0% 0% / 100% 100% repeat;
+    background: #535353 url('/images/goldValley/Headerbg.png') no-repeat center center;
+    background-size: cover; 
     align-items: center;
     /* z-index: 2; */
-    border-bottom: 16px solid #2a2a2a;
+   /* border-bottom: 16px solid #2a2a2a;*/
+}
+
+.AllCategories_goldValley.grandjackpot{
+    background: url(/images/goldValley/grand_main.png) no-repeat center;
+	background-size: cover;
+}
+
+.AllCategories_goldValley.majorjackpot{
+    background: url(/images/goldValley/major_main.png) no-repeat center;
+	background-size: cover;
+}
+.AllCategories_goldValley.minorjackpot{
+    background: url(/images/goldValley/minor_main.png) no-repeat center;
+	background-size: contain;
 }
 
 .AllCategories_goldValley.slotgames{
-    background: url(/images/goldValley/banner1Png.png) no-repeat center;
-	background-size: 100% 100%;
+    background: url(/images/goldValley/777_header.png) no-repeat center;
+	background-size: cover;
 }
 
 .AllCategories_goldValley.newgames{
-    background: url(/images/goldValley/banner2Png.png) no-repeat center;
-	background-size: 100% 100%;
+    background: url(/images/goldValley/newgames_header.png) no-repeat center;
+	background-size: cover;
 }
 .AllCategories_goldValley.livegames{
-    background: url(/images/goldValley/banner4Png.png) no-repeat center;
-	background-size: 100% 100%;
+    background: url(/images/goldValley/live_header.png) no-repeat center;
+	background-size: cover;
 }
 .AllCategories_goldValley.aviator{
-    background: url(/images/goldValley/banner3Png3.png) no-repeat center;
-	background-size: 100% 100%;
+    background: url(/images/goldValley/aviator_header.png) no-repeat center;
+	background-size: cover;
 }
 
+/*Homepage Jackpots*/
+.column_jackpots{
+    justify-content: center !important;
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-top: 120px;
+    padding-top: 0px !important;
+    padding-right: 0px;
+    padding-bottom: 0px 
+    
+}
+#jackpot_maingrand{
+    z-index: 10;
+    background: url(/images/goldValley/grand_main.png) no-repeat center;
+    height: 325px;
+    width: 790px;
+	background-size: auto 100%;
+    margin-top: 10px;    /* Top margin */
+    margin-left: -50px;
+    
+}
+#grand_jackpot {
+    margin-top: -60px;
+    height: 165px;
+    width: 500px;
+    background: url(/images/goldValley/grand_pages.png) no-repeat center;
+    background-size: contain;
+}
+
+#jackpot_mainmajor{
+    z-index: 10;
+    background: url(/images/goldValley/major_main.png) no-repeat center;
+    height: 193px;
+    width: 412px;
+	background-size: 100% 100%;
+    margin-top: 150px;    /* Top margin */
+    margin-left: 400px;    
+}
+#jackpot_mainminor{
+    z-index: 10;
+    background: url(/images/goldValley/minor_main.png) no-repeat center;
+    height: 193px;
+    width: 340px;
+	background-size: 100% 100%;
+    margin-top: 150px;    /* Top margin */
+    margin-left: 65px;    
+}
+/*.home_jackpot{
+    position: relative; top: -10px;
+    z-index: 10;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+    flex-direction: column;
+    margin-top: 0px;
+   /* margin-bottom: 350px;*/
+
+
+/*.home_jackpot_first_line{
+    z-index: 10;
+    margin-top: 60px;
+} */
+/*.home_jackpot_second_line{
+    z-index: 10;
+    margin-top: 20px;
+}*/
+
+/*End Home Jackpots*/
 
 .column_chips{
     justify-content: center !important;
@@ -580,79 +663,138 @@ input.input::-ms-input-placeholder {
 .Chips{
     height: 150px;
     width: 150px;
-    margin: 10px 0px 16px 0px;
+    margin: 10px 0px 10px 0px;
     cursor: pointer;
 }
 .Chips_letters{
     height: 70px;
     width: 100px;
-    margin: 16px 0px 16px 0px;
+    margin: -15px 0px 0px 0px;
     cursor: pointer;
 }
 
 #slot_games_in_page{
-    background: url(/images/goldValley/_777Chippng.png) no-repeat center;
+    background: url(/images/goldValley/777_p.gif) no-repeat center;
 	background-size: 100% 100%;
-    height: 100px;
-    width: 100px;
+    height: 250px;
+    width: 250px;
     margin: 25px 0px 0px 0vw;
     cursor: "default"
 }
 
 #new_games_in_page{
-    background: url(/images/goldValley/newSlotspng.png) no-repeat center;
+    background: url(/images/goldValley/new_p.gif) no-repeat center;
 	background-size: 100% 100%;
+    height: 250px;
+    width: 250px;
     margin: 25px 0px 0px 0vw;
     cursor: "default"
 }
 
 #live_tables_in_page{
-    background: url(/images/goldValley/liveTablespng.png) no-repeat center;
+    background: url(/images/goldValley/live_p.gif) no-repeat center;
 	background-size: 100% 100%;
+    height: 250px;
+    width: 250px;
     margin: 25px 0px 0px 0vw;
     cursor: "default"
 }
 
 #aviator_spribe_in_page{
-    background: url(/images/goldValley/aviatorpng.png) no-repeat center;
+    background: url(/images/goldValley/aviator_p.gif) no-repeat center;
 	background-size: 100% 100%;
+    height: 250px;
+    width: 250px;
     margin: 25px 0px 0px 0vw;
     cursor: "default"
 }
 
-
 #slot_games{
-    background: url(/images/goldValley/_777Chippng.png) no-repeat center;
+    background: url(/images/goldValley/777_p.gif) no-repeat center;
+    height: 250px;
+    width: 250px;
 	background-size: 100% 100%;
 }
 #slot_games_letters{
-    background: url(/images/goldValley/slotgamespng.png) no-repeat center;
+    background: url(/images/goldValley/slotgamestitle.png) no-repeat center;
+    height: 69px;
+    width: 117px;
+	background-size: 100% 100%;
 	background-size: 100% 100%;
 }
 #new_games{
-    background: url(/images/goldValley/newSlotspng.png) no-repeat center;
+    background: url(/images/goldValley/new_p.gif) no-repeat center;
+    height: 250px;
+    width: 250px;
 	background-size: 100% 100%;
 }
 #new_games_letters{
-    background: url(/images/goldValley/newgamespng.png) no-repeat center;
+    background: url(/images/goldValley/newgames_title.png) no-repeat center;
+    height: 69px;
+    width: 119px;
+	background-size: 100% 100%;
 	background-size: 100% 100%;
 }
 #live_tables{
-    background: url(/images/goldValley/liveTablespng.png) no-repeat center;
+    background: url(/images/goldValley/live_p.gif) no-repeat center;
+    height: 250px;
+    width: 250px;
 	background-size: 100% 100%;
 }
 #live_tables_letters{
-    background: url(/images/goldValley/liveTablesTextpng.png) no-repeat center;
+    background: url(/images/goldValley/live_tables.png) no-repeat center;
+    height: 69px;
+    width: 122px;
 	background-size: 100% 100%;
 }
 #aviator_spribe{
-    background: url(/images/goldValley/aviatorpng.png) no-repeat center;
+    background: url(/images/goldValley/aviator_p.gif) no-repeat center;
+    height: 250px;
+    width: 250px;
 	background-size: 100% 100%;
 }
 #aviator_spribe_letters{
-    background: url(/images/goldValley/aviatorspribepng.png) no-repeat center;
+    background: url(/images/goldValley/aviatortitle.png) no-repeat center;
+    height: 69px;
+    width: 150px;
 	background-size: 100% 100%;
 }
+/*Homepage Providers Menu*/
+.column_providers_menu{
+    z-index: 7;
+    justify-content: center !important;
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+}
+#providers_menubar{
+    z-index: 8;
+    background: url(/images/goldValley/companies_nav.png) no-repeat center;
+    height: 65px;
+    width: 100%;
+	background-size: auto 100%;
+
+}
+
+#providers_logos{
+    z-index: 8;
+    background: url(/images/goldValley/vendorlogos.png) repeat-x center;
+    height: 65px;
+    width: 100%;
+    background-size: auto 100%; /* Adjusts to the height of the container, width scales automatically */
+    margin-top: -65px;
+    position: relative;
+    overflow: hidden;
+    animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-1980px); } /* Moves exactly the width of the image */
+}
+
+/*End Homepage Providers Menu*/
+
 
 .preloader {
     display: flex;
@@ -674,18 +816,18 @@ input.input::-ms-input-placeholder {
     opacity: 1 !important;
     visibility: visible !important;
 }
-.logo_spinning{
+/*.logo_spinning{
     background: url(/images/goldValley/gvlogo.gif) no-repeat center;
 	background-size: 100% 100%;
     width: 240px;
     height: 135px;
     margin-top: -100px;
-}
+}*/
 
 .Main_screen{
     position: relative;
     width: 100%;
-    background: url(/images/goldValley/homebgpng.png) no-repeat;
+    background-color: #787878; 
 	background-size: 100% 100%;
     justify-content: center;
     display: inline-flex;
@@ -698,20 +840,33 @@ input.input::-ms-input-placeholder {
 	background-size: 100% 100%;
 }
 .Main_screen.newgames{
-    background: url(/images/goldValley/newgamesbgpng.png) no-repeat;
+    background: url(/images/goldValley/new_bg.png) no-repeat;
 	background-size: 100% 100%;
 }
 .Main_screen.livegames{
-    background: url(/images/goldValley/livebgpng.png) no-repeat;
-	background-size: 100% 100%;
+    background: url(/images/goldValley/body_bg.png) no-repeat;
+	background-size: cover;
 }
 .Main_screen.aviator{
-    background: url(/images/goldValley/aviatorbgpng.png) no-repeat;
+    background: url(/images/goldValley/aviator_bg.png) no-repeat;
 	background-size: 100% 100%;
 }
 
 .the_jackpot{
-    position: relative;
+    position: relative; top: absolute;
+    z-index: 10;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    flex-direction: column;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.the_jackpot_first_line{
+    position: relative; top: 0px;
     z-index: 10;
     align-items: center;
     display: inline-flex;
@@ -719,157 +874,228 @@ input.input::-ms-input-placeholder {
     font-size: 20px;
     font-weight: 700;
     flex-direction: column;
-}
-
-.the_jackpot_first_line{
-    margin-top: 45px;
+    margin-top: -20px;
 }
 .the_jackpot_second_line{
-    margin-top: 10px;
+    position: relative; top: 0px;
+    z-index: 10;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    flex-direction: row;
+    margin-top: -2px;
 }
 
 #grand_jackpot{
     margin-top: -60px;
     height: 165px;
     width: 500px;
-    background: url(/images/goldValley/grandpng2.png) no-repeat center;
-	background-size: contain;
-}
-#grand_jackpot_main_screen{
-    margin-top: -60px;
-    height: 165px;
-    width: 500px;
-    background: url(/images/goldValley/grandpng2.png) no-repeat center;
+    background: url(/images/goldValley/grand_pages.png) no-repeat center;
 	background-size: contain;
 }
 
 #major_jackpot{
-    height: 170px;
-    width: 334px;
-    background: url(/images/goldValley/majorpng.png) no-repeat center;
-	background-size: contain;
+    height: 150px;
+    width: 400px;
+    background: url(/images/goldValley/major_pages.png) no-repeat center;
+	background-size: 100% 100%;
 }
 #minor_jackpot{
-    height: 170px;
-    width: 334px;
-    background: url(/images/goldValley/minorpng.png) no-repeat center;
-	background-size: contain;
-}
-#mini_jackpot{
-    height: 170px;
-    width: 334px;
-    background: url(/images/goldValley/minipng.png) no-repeat center;
-	background-size: contain;
+    height: 150px;
+    width: 400px;
+    background: url(/images/goldValley/minor_pages.png) no-repeat center;
+	background-size: 100% 100%;
 }
 
 @media screen and (max-width: 599px) {
-    .the_jackpot{
-        font-size: 4vw;
-        font-weight: 700;
-    }
-    .the_jackpot_first_line{
-        margin-top: 25px;
-    }
-    .the_jackpot_second_line{
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-    #grand_jackpot {
-        width: 90%;
-        /* height: auto; */
-        margin-top: -40px;
-    }
-    #major_jackpot {
-        width: 80%;
-        /* height: auto; */
-        margin-top: -20px;
-    }
-    #minor_jackpot {
-        width: 80%;
-        /* height: auto; */
-        margin-top: -20px;
-    }
-    #mini_jackpot {
-        width: 80%;
-        /* height: auto; */
-        margin-top: -20px;
-    }
-
-    .AllCategories_goldValley.slotgames{
-        background: url(/images/goldValley/banner1Png_mobile.png) no-repeat center;
+    .gold_Valley_3dtext{
+        width: 400px;
+        height: 80px;
+        margin-left: 30px;
+        /* max-width: 10rem; */
+        /* max-height: 3rem; */
+        /* transform: scale(1.5); */
+        position: relative;
+        background: url(/images/goldValley/gv3dtitle.png) no-repeat center;
         background-size: 100% 100%;
     }
+/*Homepage Jackpots*/
+.column_jackpots{
+    justify-content: center !important;
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-top: 120px;
+    padding-top: 0px !important;
+    padding-right: 0px;
+    padding-bottom: 0px 
     
-    .AllCategories_goldValley.newgames{
-        background: url(/images/goldValley/banner2Png_mobile.png) no-repeat center;
-        background-size: 100% 100%;
-    }
-    .AllCategories_goldValley.livegames{
-        background: url(/images/goldValley/banner4Png_mobile.png) no-repeat center;
-        background-size: 100% 100%;
-    }
-    .AllCategories_goldValley.aviator{
-        background: url(/images/goldValley/banner3Png3_mobile.png) no-repeat center;
-        background-size: 100% 100%;
-    }
-
-    #slot_games_in_page{
-        margin: 25px 0px 0px 0vw;
-    }
+}
+#jackpot_maingrand{
+    z-index: 10;
+    background: url(/images/goldValley/grand_main.png) no-repeat center;
+    background-size: contain;
+    height: 175px;
+   /* width: 400px;*/
+	background-size: auto 100%;
+    margin-top: 10px;    /* Top margin */
+    margin-left: -240px;
     
-    #new_games_in_page{
-        height: 100px;
-        width: 100px;
-        margin: 40px 0px 0px 0px;
-    }
-
-    #live_tables_in_page{
-        height: 100px;
-        width: 100px;
-        margin: 40px 0px 0px 0px;
-    }
-
-    #aviator_spribe_in_page{
-        height: 100px;
-        width: 100px;
-        margin: 40px 0px 0px 0px;
-    }
-
-    .Chips.main_screen{
-        height: 100px;
-        width: 80%;
-        margin: 10px 0px 0px 0px;
-    }
-    .Chips_letters.main_screen{
-        height: 70px;
-        width: 100%;
-        margin: 10px 0px 10px 0px;
-    }
-
-    .AllCategories_goldValley.main_screen{
-        height: auto;
-    }
-
-    #grand_jackpot_main_screen {
-        width: 90%;
-        /* height: auto; */
-        margin-top: -10px;
-    }
-    .gold_Valley_logo{
-        height: 70px;
-        width: 125px;
-    }
-    .toolbar_height{
-        height: 107px;
-        min-height: 107px;
-    }
-
 }
 
-.the_slicker_categories{
-    width: 85%;
+#jackpot_mainmajor{
+    z-index: 10;
+    background: url(/images/goldValley/major_main.png) no-repeat center;
+    /*height: 193px;*/
+    width: 250px;
+	background-size: contain;
+    margin-top: 150px;    /* Top margin */
+    margin-left: -35px;   
+}
+#jackpot_mainminor{
+    z-index: 10;
+    background: url(/images/goldValley/minor_main.png) no-repeat center;
+    /*height: 193px;*/
+    width: 230px;
+	background-size: contain;
+    margin-top: 150px;    /* Top margin */
+    margin-left: 110px;    
+}
+/*.home_jackpot{
+    position: relative; top: -10px;
+    z-index: 10;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+    flex-direction: column;
+    margin-top: 0px;
+   /* margin-bottom: 350px;*/
+
+
+/*.home_jackpot_first_line{
+    z-index: 10;
+    margin-top: 60px;
+} */
+/*.home_jackpot_second_line{
+    z-index: 10;
+    margin-top: 20px;
+}*/
+
+/*End Home Jackpots*/
+.column_chips{
+    justify-content: center !important;
     display: inline-flex !important;
-    /* position: fixed !important; */
+    flex-direction: row !important;
+    align-items: center !important;
+    padding-top: 0px !important;
+}
+
+.Chips{
+   /* height: 130px;*/
+  /*  width: 150px;*/
+ /*   margin: -90px 0px 0px 0px;*/
+    cursor: pointer;
+}
+.Chips_letters{
+   /* height: 70px;
+    width: 100px;*/
+    margin: 0px 0px 0px 0px;
+    cursor: pointer;
+}
+
+#slot_games_in_page{
+    background: url(/images/goldValley/777_p.gif) no-repeat center;
+	background-size: contain;
+    height: 250px;
+    width: 250px;
+    margin: 25px 0px 0px 0vw;
+    cursor: "default"
+}
+
+#new_games_in_page{
+    background: url(/images/goldValley/new_p.gif) no-repeat center;
+	background-size: contain;
+    height: 250px;
+    width: 250px;
+    margin: 25px 0px 0px 0vw;
+    cursor: "default"
+}
+
+#live_tables_in_page{
+    background: url(/images/goldValley/live_p.gif) no-repeat center;
+	background-size: 100% 100%;
+    height: 250px;
+    width: 250px;
+    margin: 25px 0px 0px 0vw;
+    cursor: "default"
+}
+
+#aviator_spribe_in_page{
+    background: url(/images/goldValley/aviator_p.gif) no-repeat center;
+	background-size: 100% 100%;
+    height: 250px;
+    width: 250px;
+    margin: 25px 0px 0px 0vw;
+    cursor: "default"
+}
+
+#slot_games{
+    background: url(/images/goldValley/777_p.gif) no-repeat center;
+   /* height: 250px; */
+    width: 130px;
+	background-size: contain;
+}
+#slot_games_letters{
+    background: url(/images/goldValley/slotgamestitle.png) no-repeat center;
+    /*height: 69px;*/
+    width: 70px;
+	background-size: contain;
+    margin-top: -180px;
+}
+#new_games{
+    background: url(/images/goldValley/new_p.gif) no-repeat center;
+   /* height: 250px;*/
+    width: 130px;
+	background-size: contain;
+}
+#new_games_letters{
+    background: url(/images/goldValley/newgames_title.png) no-repeat center;
+   /* height: 69px;*/
+    width: 70px;
+	background-size: contain;
+    margin-top: -180px;
+}
+#live_tables{
+    background: url(/images/goldValley/live_p.gif) no-repeat center;
+   /* height: 250px;*/
+    width: 130px;
+	background-size: contain;
+}
+#live_tables_letters{
+    background: url(/images/goldValley/live_tables.png) no-repeat center;
+    /*height: 69px;*/
+    width: 80px;
+	background-size: contain;
+    margin-top: -180px;
+}
+#aviator_spribe{
+    background: url(/images/goldValley/aviator_p.gif) no-repeat center;
+    /*height: 130px;*/
+    width: 130px;
+	background-size: contain;
+    
+}
+#aviator_spribe_letters{
+    background: url(/images/goldValley/aviatortitle.png) no-repeat center;
+    /*height: 69px;*/
+    width: 80px;
+	background-size: contain;
+    margin-top: -180px;
+}
 }
 
 .goldVallley_categories{
@@ -889,12 +1115,12 @@ input.input::-ms-input-placeholder {
     padding: 0px 10px;
 }
 
-.goldVallley_categories.active{
+/*.goldValley_categories.active{
     color: black;
     background-color: #D7B56C;
     background: linear-gradient(90deg,#000 0%,#D7B56C 20%, #D7B56C 80%,#000 100%)
 }
-
+*/
 
 /* .categories_arrow:hover {
     background-image: url(/images/arrow_provider_hover.png);

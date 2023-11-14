@@ -879,34 +879,87 @@ const LiveGames = () => {
                   alignItems: "center",
                 }}
               >
-                <span className="toolbar_height"></span>
-
                 <div className="AllCategories_goldValley livegames">
-                  <Grid
+                <Grid
                     container
                     spacing={2}
                     style={{
                       height: "100%",
                       alignItems: "flex-start",
-                      marginTop: "0px",
+                      marginBottom: "-8px"
                     }}
                   >
-                    <Grid item xs={12} className="column_chips">
-                      <div className="Chips" id="live_tables_in_page"></div>
+                   <Grid
+                    item
+                    xs={12}
+                    style={{ display: "inline-flex" }}
+                    justifyContent="center"
+                    alignItems="center"
+                    marginTop="180px"
+                  >
+                    <div className="the_jackpot" id="grand_jackpot">
+                      <span className="the_jackpot_first_line">
+                        GRAND JACKPOT
+                      </span>
+                      <span className="the_jackpot_second_line">
+                        {"1234569 GVK"}
+                      </span>
+                    </div>
+                  </Grid>
+                  <Grid
+                    item
+                    sm={7}
+                    xs={12}
+                    style={{ display: "inline-flex" }}
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <div className="the_jackpot" id="major_jackpot">
+                      <span className="the_jackpot_first_line">
+                        MAJOR JACKPOT
+                      </span>
+                      <span className="the_jackpot_second_line">
+                        {"1234569 GVK"}
+                      </span>
+                    </div>
+                  </Grid>
+                  <Grid
+                    item
+                    sm={2}
+                    xs={12}
+                    style={{ display: "inline-flex" }}
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <div className="the_jackpot" id="minor_jackpot">
+                      <span className="the_jackpot_first_line">
+                        MINOR JACKPOT
+                      </span>
+                      <span className="the_jackpot_second_line">
+                        {"1234569 GVK"}
+                      </span>
+                    </div>
+                  </Grid>
+                    <Grid item xs={12} className="column_chips" marginTop="-150px">
+                      <div className="Chips" id="live_games_in_page"></div>
                     </Grid>
                     <Grid
                       item
                       xs={12}
                       sx={{
                         margin: {
-                          xs: "75px 0px 0px 0px",
+                          xs: "60px 0px 0px 0px",
                           sm: "25px 0px 0px 0px",
-                        },
+                        }
                       }}
                       style={{
                         display: "flex",
                         justifyContent: "space-between",
                         backgroundColor: "#2a2a2a",
+                        borderBottom: "3px solid",
+                        borderTop: "3px solid",
+                        borderImage: 'linear-gradient(to right, #c58209, #ffff6c,#a86506 ) 1' ,
+                        marginBottom: "20px"
                       }}
                     >
                       <IconButton
@@ -917,7 +970,7 @@ const LiveGames = () => {
                         style={{
                           borderRadius: "0px",
                           margin: "0px",
-                          padding: "0px 12px 0px 12px",
+                          padding: "-10px 10px -10px 10px",
                         }}
                         onClick={(event) => {
                           window.location.href = "/#/home";
@@ -953,93 +1006,8 @@ const LiveGames = () => {
                           />
                         </IconButton>
                       )}
-                    </Grid>
-                  </Grid>
-                </div>
-                <Grid
-                  container
-                  className="Main_screen livegames"
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <Grid
-                    item
-                    xs={12}
-                    style={{ display: "inline-flex" }}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <div className="the_jackpot" id="grand_jackpot">
-                      <span className="the_jackpot_first_line">
-                        GRAND JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
-                        {"1234569 GVK"}
-                      </span>
-                    </div>
-                  </Grid>
-                  <Grid
-                    item
-                    sm={4}
-                    xs={12}
-                    style={{ display: "inline-flex" }}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <div className="the_jackpot" id="major_jackpot">
-                      <span className="the_jackpot_first_line">
-                        MAJOR JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
-                        {"1234569 GVK"}
-                      </span>
-                    </div>
-                  </Grid>
-                  <Grid
-                    item
-                    sm={4}
-                    xs={12}
-                    style={{ display: "inline-flex" }}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <div className="the_jackpot" id="minor_jackpot">
-                      <span className="the_jackpot_first_line">
-                        MINOR JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
-                        {"1234569 GVK"}
-                      </span>
-                    </div>
-                  </Grid>
-                  <Grid
-                    item
-                    sm={4}
-                    xs={12}
-                    style={{ display: "inline-flex" }}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <div className="the_jackpot" id="mini_jackpot">
-                      <span className="the_jackpot_first_line">
-                        MINI JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
-                        {"1234569 GVK"}
-                      </span>
-                    </div>
-                  </Grid>
-                  <Grid
-                    item
-                    sm={12}
-                    xs={12}
-                    style={{
-                      paddingTop: "20px",
-                      display: "inline-flex",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <div className="speedmeter_box">
+                      
+                     <div className="speedmeter_box">
                       <div
                         className="speedmeter"
                         onClick={() => {
@@ -1066,16 +1034,25 @@ const LiveGames = () => {
                       )}
                       <div
                         style={{
-                          fontSize: "2rem",
+                          fontSize: "1rem",
                           fontWeight: "bold",
                           marginTop: "0px",
+                          marginRight: "15px",
                           color: ShowWifiSpeed ? "white" : "black",
                         }}
                       >
-                        {ShowWifiSpeed ? WifiSpeed + " Mbps" : "SPEED TEST"}
+                      {ShowWifiSpeed ? WifiSpeed + " Mbps" : "SPEED TEST"}
                       </div>
                     </div>
+                    </Grid>
                   </Grid>
+                </div>
+                <Grid
+                  container
+                  className="Main_screen livegames"
+                  justifyContent="center"
+                  alignItems="center"
+                >
                   <Grid
                     item
                     sm={12}

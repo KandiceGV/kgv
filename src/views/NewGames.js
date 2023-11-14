@@ -896,10 +896,61 @@ const NewGames = () => {
                     style={{
                       height: "100%",
                       alignItems: "flex-start",
-                      marginTop: "0px",
+                      marginBottom: "-8px"
                     }}
                   >
-                    <Grid item xs={12} className="column_chips">
+                   <Grid
+                    item
+                    xs={12}
+                    style={{ display: "inline-flex" }}
+                    justifyContent="center"
+                    alignItems="center"
+                    marginTop="180px"
+                  >
+                    <div className="the_jackpot" id="grand_jackpot">
+                      <span className="the_jackpot_first_line">
+                        GRAND JACKPOT
+                      </span>
+                      <span className="the_jackpot_second_line">
+                        {"1234569 GVK"}
+                      </span>
+                    </div>
+                  </Grid>
+                  <Grid
+                    item
+                    sm={7}
+                    xs={12}
+                    style={{ display: "inline-flex" }}
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <div className="the_jackpot" id="major_jackpot">
+                      <span className="the_jackpot_first_line">
+                        MAJOR JACKPOT
+                      </span>
+                      <span className="the_jackpot_second_line">
+                        {"1234569 GVK"}
+                      </span>
+                    </div>
+                  </Grid>
+                  <Grid
+                    item
+                    sm={2}
+                    xs={12}
+                    style={{ display: "inline-flex" }}
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <div className="the_jackpot" id="minor_jackpot">
+                      <span className="the_jackpot_first_line">
+                        MINOR JACKPOT
+                      </span>
+                      <span className="the_jackpot_second_line">
+                        {"1234569 GVK"}
+                      </span>
+                    </div>
+                  </Grid>
+                    <Grid item xs={12} className="column_chips" marginTop="-150px">
                       <div className="Chips" id="new_games_in_page"></div>
                     </Grid>
                     <Grid
@@ -907,7 +958,7 @@ const NewGames = () => {
                       xs={12}
                       sx={{
                         margin: {
-                          xs: "75px 0px 0px 0px",
+                          xs: "60px 0px 0px 0px",
                           sm: "25px 0px 0px 0px",
                         }
                       }}
@@ -915,6 +966,10 @@ const NewGames = () => {
                         display: "flex",
                         justifyContent: "space-between",
                         backgroundColor: "#2a2a2a",
+                        borderBottom: "3px solid",
+                        borderTop: "3px solid",
+                        borderImage: 'linear-gradient(to right, #c58209, #ffff6c,#a86506 ) 1' ,
+                        marginBottom: "20px"
                       }}
                     >
                       <IconButton
@@ -925,7 +980,7 @@ const NewGames = () => {
                         style={{
                           borderRadius: "0px",
                           margin: "0px",
-                          padding: "0px 12px 0px 12px",
+                          padding: "-10px 10px -10px 10px",
                         }}
                         onClick={(event) => {
                           window.location.href = "/#/home";
@@ -972,70 +1027,12 @@ const NewGames = () => {
                 >
                   <Grid
                     item
+                    sm={1}
                     xs={12}
                     style={{ display: "inline-flex" }}
                     justifyContent="center"
                     alignItems="center"
                   >
-                    <div className="the_jackpot" id="grand_jackpot">
-                      <span className="the_jackpot_first_line">
-                        GRAND JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
-                        {"1234569 GVK"}
-                      </span>
-                    </div>
-                  </Grid>
-                  <Grid
-                    item
-                    sm={4}
-                    xs={12}
-                    style={{ display: "inline-flex" }}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <div className="the_jackpot" id="major_jackpot">
-                      <span className="the_jackpot_first_line">
-                        MAJOR JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
-                        {"1234569 GVK"}
-                      </span>
-                    </div>
-                  </Grid>
-                  <Grid
-                    item
-                    sm={4}
-                    xs={12}
-                    style={{ display: "inline-flex" }}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <div className="the_jackpot" id="minor_jackpot">
-                      <span className="the_jackpot_first_line">
-                        MINOR JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
-                        {"1234569 GVK"}
-                      </span>
-                    </div>
-                  </Grid>
-                  <Grid
-                    item
-                    sm={4}
-                    xs={12}
-                    style={{ display: "inline-flex" }}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <div className="the_jackpot" id="mini_jackpot">
-                      <span className="the_jackpot_first_line">
-                        MINI JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
-                        {"1234569 GVK"}
-                      </span>
-                    </div>
                   </Grid>
                   <Grid
                     item

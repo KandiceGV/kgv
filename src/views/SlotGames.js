@@ -890,25 +890,86 @@ const SlotGames = () => {
                 ></span>
 
                 <div className="AllCategories_goldValley slotgames">
-                  <Grid
+                <Grid
                     container
                     spacing={2}
                     style={{
                       height: "100%",
                       alignItems: "flex-start",
-                      marginTop: "0px",
+                      marginBottom: "-8px"
                     }}
                   >
-                    <Grid item xs={12} className="column_chips">
+                   <Grid
+                    item
+                    xs={12} sm={12}
+                    style={{ display: "inline-flex" }}
+                    justifyContent="center"
+                    alignItems="center"
+                    marginTop="180px"
+                  >
+                    <div className="the_jackpot" id="grand_jackpot">
+                      <span className="the_jackpot_first_line">
+                        GRAND JACKPOT
+                      </span>
+                      <span className="the_jackpot_second_line">
+                        {"1234569 GVK"}
+                      </span>
+                    </div>
+                  </Grid>
+                  <Grid
+                    item
+                    sm={7}
+                    xs={6}
+                    style={{ display: "inline-flex" }}
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <div className="the_jackpot" id="major_jackpot">
+                      <span className="the_jackpot_first_line">
+                        MAJOR JACKPOT
+                      </span>
+                      <span className="the_jackpot_second_line">
+                        {"1234569 GVK"}
+                      </span>
+                    </div>
+                  </Grid>
+                  <Grid
+                    item
+                    sm={3}
+                    xs={6}
+                    style={{ display: "inline-flex" }}
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <div className="the_jackpot" id="minor_jackpot">
+                      <span className="the_jackpot_first_line">
+                        MINOR JACKPOT
+                      </span>
+                      <span className="the_jackpot_second_line">
+                        {"1234569 GVK"}
+                      </span>
+                    </div>
+                  </Grid>
+                    <Grid item xs={11} sm={12} className="column_chips" marginTop="-150px">
                       <div className="Chips" id="slot_games_in_page"></div>
                     </Grid>
                     <Grid
                       item
                       xs={12}
+                      sx={{
+                        margin: {
+                          xs: "60px 0px 0px 0px",
+                          sm: "25px 0px 0px 0px",
+                        }
+                      }}
                       style={{
-                        display: "flex",
+                        display: "inline-flex",
                         justifyContent: "space-between",
-                        margin: "75px 0px 0px 0px",
+                        backgroundColor: "#2a2a2a",
+                        borderBottom: "3px solid",
+                        borderTop: "3px solid",
+                        borderImage: 'linear-gradient(to right, #c58209, #ffff6c,#a86506 ) 1' ,
+                        marginBottom: "20px"
                       }}
                     >
                       <IconButton
@@ -919,7 +980,7 @@ const SlotGames = () => {
                         style={{
                           borderRadius: "0px",
                           margin: "0px",
-                          padding: "0px 12px 0px 12px",
+                          padding: "-10px 0px -10px 0px",
                         }}
                         onClick={(event) => {
                           window.location.href = "/#/home";
@@ -957,7 +1018,7 @@ const SlotGames = () => {
                       )}
                     </Grid>
                   </Grid>
-                </div>
+                </div>                
                 <Grid
                   container
                   className="Main_screen slotgames"
@@ -966,70 +1027,12 @@ const SlotGames = () => {
                 >
                   <Grid
                     item
+                    sm={1}
                     xs={12}
                     style={{ display: "inline-flex" }}
                     justifyContent="center"
                     alignItems="center"
                   >
-                    <div className="the_jackpot" id="grand_jackpot">
-                      <span className="the_jackpot_first_line">
-                        GRAND JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
-                        {"1234569 GVK"}
-                      </span>
-                    </div>
-                  </Grid>
-                  <Grid
-                    item
-                    sm={4}
-                    xs={12}
-                    style={{ display: "inline-flex" }}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <div className="the_jackpot" id="major_jackpot">
-                      <span className="the_jackpot_first_line">
-                        MAJOR JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
-                        {"1234569 GVK"}
-                      </span>
-                    </div>
-                  </Grid>
-                  <Grid
-                    item
-                    sm={4}
-                    xs={12}
-                    style={{ display: "inline-flex" }}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <div className="the_jackpot" id="minor_jackpot">
-                      <span className="the_jackpot_first_line">
-                        MINOR JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
-                        {"1234569 GVK"}
-                      </span>
-                    </div>
-                  </Grid>
-                  <Grid
-                    item
-                    sm={4}
-                    xs={12}
-                    style={{ display: "inline-flex" }}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <div className="the_jackpot" id="mini_jackpot">
-                      <span className="the_jackpot_first_line">
-                        MINI JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
-                        {"1234569 GVK"}
-                      </span>
-                    </div>
                   </Grid>
                   <Grid
                     item

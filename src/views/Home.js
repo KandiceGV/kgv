@@ -755,8 +755,8 @@ const Home = () => {
 
   function AdjustSizeFunction() {
     if (window.innerWidth < 600) {
-      setTheColumns(1);
-      setTheRowHeight(200);
+      setTheColumns(3);
+      setTheRowHeight(100);
     } else {
       setTheColumns(5);
       setTheRowHeight(164);
@@ -878,19 +878,50 @@ const Home = () => {
                   alignItems: "center",
                 }}
               >
-                <span className="toolbar_height"></span>
+                <div className="AllCategories_goldValley main_screen" >
+                <Grid
+                    container
+                    rowSpacing={1}
+                    columnSpacing={3}
+                    style={{
+                      height: "700px",
+                      alignItems: "flex-start",
+                      marginTop: "80px",
+                      marginBottom: "-10px",
+                    }}
+                  >
+                    <Grid item xs={1} sm={4}>
+                    <div
+                       style={{
+                        flexDirection: "row"}}
+                        className="jackpot_mainmajor"
+                        id="jackpot_mainmajor"
+                      ></div>                     
+                    </Grid>
+                    <Grid item xs={1} sm={3}>
+                      <div
+                        className="jackpot_maingrand"
+                        id="jackpot_maingrand"
+                      ></div>                       
+                    </Grid>
+                    
+                    <Grid item xs={1} sm={1}>
+                      <div
+                        className="jackpot_mainminor"
+                        id="jackpot_mainminor"
+                      ></div>
+                    </Grid>
 
-                <div className="AllCategories_goldValley main_screen">
                   <Grid
                     container
-                    spacing={2}
+                    spacing={1}
                     style={{
-                      height: "100%",
+                      height: "400px",
                       alignItems: "flex-start",
                       marginTop: "0px",
                     }}
-                  >
-                    <Grid item xs={3} className="column_chips">
+                  >                  
+                   <Grid item xs={3} sm={3} className="column_chips">
                       <div
                         className="Chips main_screen"
                         id="slot_games"
@@ -898,15 +929,9 @@ const Home = () => {
                           window.location.href = "/#/slotgames";
                         }}
                       ></div>
-                      <div
-                        className="Chips_letters main_screen"
-                        id="slot_games_letters"
-                        onClick={() => {
-                          window.location.href = "/#/slotgames";
-                        }}
-                      ></div>
+                      
                     </Grid>
-                    <Grid item xs={3} className="column_chips">
+                    <Grid item xs={3} sm={3} className="column_chips">
                       <div
                         className="Chips main_screen"
                         id="new_games"
@@ -914,15 +939,8 @@ const Home = () => {
                           window.location.href = "/#/newgames";
                         }}
                       ></div>
-                      <div
-                        className="Chips_letters main_screen"
-                        id="new_games_letters"
-                        onClick={() => {
-                          window.location.href = "/#/newgames";
-                        }}
-                      ></div>
                     </Grid>
-                    <Grid item xs={3} className="column_chips">
+                    <Grid item xs={3} sm={3} className="column_chips">
                       <div
                         className="Chips main_screen"
                         id="live_tables"
@@ -930,15 +948,8 @@ const Home = () => {
                           window.location.href = "/#/livegames";
                         }}
                       ></div>
-                      <div
-                        className="Chips_letters main_screen"
-                        id="live_tables_letters"
-                        onClick={() => {
-                          window.location.href = "/#/livegames";
-                        }}
-                      ></div>
                     </Grid>
-                    <Grid item xs={3} className="column_chips">
+                    <Grid xs={3} sm={3} className="column_chips">
                       <div
                         className="Chips main_screen"
                         id="aviator_spribe"
@@ -946,102 +957,78 @@ const Home = () => {
                           window.location.href = "/#/aviator";
                         }}
                       ></div>
+                      </Grid>
+                      <Grid item xs={3} sm={3} className="column_chips">
+                     <div
+                     className="Chips_letters"
+                        id="slot_games_letters"
+                        onClick={() => {
+                          window.location.href = "/#/slotgames";
+                        }}
+                      ></div>
+                    </Grid>
+                    <Grid item xs={3} sm={3} className="column_chips">
                       <div
-                        className="Chips_letters main_screen"
+                      className="Chips_letters"
+                        id="new_games_letters"
+                        onClick={() => {
+                          window.location.href = "/#/newgames";
+                        }}
+                      ></div>
+                    </Grid>
+                    <Grid item xs={3} sm={3} className="column_chips">
+                      <div
+                      className="Chips_letters"
+                        id="live_tables_letters"
+                        onClick={() => {
+                          window.location.href = "/#/livegames";
+                        }}
+                      ></div>
+                    </Grid>
+                    <Grid xs={3} sm={3} className="column_chips">
+                      <div
+                      className="Chips_letters"
                         id="aviator_spribe_letters"
                         onClick={() => {
                           window.location.href = "/#/aviator";
                         }}
                       ></div>
-                    </Grid>
-                  </Grid>
-                </div>
+                      </Grid>
+                    </Grid>  
+                    </Grid>  
+                  </div>
+
+
                 <Grid
                   container
                   className="Main_screen"
                   justifyContent="center"
                   alignItems="center"
                 >
-                  <Grid
-                    item
-                    xs={12}
-                    style={{ display: "inline-flex" }}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <div className="the_jackpot" id="grand_jackpot_main_screen">
-                      <span className="the_jackpot_first_line">
-                        GRAND JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
-                        {TheJackpotValues[0].value + TheCurrency}
-                      </span>
-                    </div>
-                  </Grid>
-                  <Grid
-                    item
-                    sm={4}
-                    xs={12}
-                    style={{ display: "inline-flex" }}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <div className="the_jackpot" id="major_jackpot">
-                      <span className="the_jackpot_first_line">
-                        MAJOR JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
-                        {TheJackpotValues[1].value + TheCurrency}
-                      </span>
-                    </div>
-                  </Grid>
-                  <Grid
-                    item
-                    sm={4}
-                    xs={12}
-                    style={{ display: "inline-flex" }}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <div className="the_jackpot" id="minor_jackpot">
-                      <span className="the_jackpot_first_line">
-                        MINOR JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
-                        {TheJackpotValues[2].value + TheCurrency}
-                      </span>
-                    </div>
-                  </Grid>
-                  <Grid
-                    item
-                    sm={4}
-                    xs={12}
-                    style={{ display: "inline-flex" }}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <div className="the_jackpot" id="mini_jackpot">
-                      <span className="the_jackpot_first_line">
-                        MINI JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
-                        {TheJackpotValues[3].value + TheCurrency}
-                      </span>
-                    </div>
-                  </Grid>
+                 <div
+                  className="column_providers_menu"
+                  id="providers_menubar"
+                  
+                      ></div>
+                 <div
+                  className="column_providers_menu"
+                  id="providers_logos"
+                  
+                      ></div>
                   <Grid
                     item
                     sm={12}
                     xs={12}
                     style={{
-                      paddingTop: "20px",
+                      paddingTop: "0px",
                       display: "inline-flex",
                       justifyContent: "center",
                     }}
                   >
+                    
                     <ImageList
                       cols={TheColumns}
-                      gap={20}
+                      gap={15}
                       rowHeight={TheRowHeight}
                       variant="quilted"
                       sx={{

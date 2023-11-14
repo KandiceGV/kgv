@@ -79,12 +79,15 @@ export const HeaderGoldValley = ({ logOut, theBalance, theUsername }) => {
     <div>
       <AppBar
         style={{
-          borderBottom: "5px solid #ce9400",
           backgroundColor: "#292929",
+          borderBottom: '8px solid transparent',
+          borderImage: 'linear-gradient(to right, #c58209, #ffff6c,#a86506 ) 1' ,
+          borderImageSlice: 1,
+          borderImageWidth: '0 0 3px 0',
         }}
       >
-        <Toolbar style={{ padding: "16px", backgroundColor: "transparent" }}>
-          <div className="gold_Valley_logo"></div>
+        <Toolbar style={{ padding: "0px", backgroundColor: "transparent" }}>
+          <div className="gold_Valley_3dtext"></div>
           <Box sx={{ flexGrow: 1 }} />
           <IconButton
             sx={{ display: { xs: "inherit", sm: "none" } }}
@@ -104,7 +107,7 @@ export const HeaderGoldValley = ({ logOut, theBalance, theUsername }) => {
                 fontSize: "1rem",
                 fontWeight: "700",
                 color: "white",
-                marginLeft: "8px",
+                marginLeft: "15px",
               }}
             >
               {theUsername}
@@ -155,7 +158,7 @@ export const HeaderGoldValley = ({ logOut, theBalance, theUsername }) => {
                 <ListItemIcon>
                   <LogoutOutlinedIcon style={{ color: "black" }} />
                 </ListItemIcon>
-                <ListItemText>Log out</ListItemText>
+                <ListItemText>Log Out</ListItemText>
               </ListItem>
             </List>
           </Drawer>
@@ -182,7 +185,8 @@ export const HeaderGoldValley = ({ logOut, theBalance, theUsername }) => {
                 fontWeight: "700",
                 color: "white",
                 // WebkitTextStroke: "0.5px black",
-                marginLeft: "8px",
+                marginLeft: "10px",
+                paddingRight: "50px"
               }}
             >
               {theUsername}
@@ -238,8 +242,9 @@ export const HeaderGoldValley = ({ logOut, theBalance, theUsername }) => {
               fontSize: "16px",
               borderRadius: "50px",
               marginLeft: "8px",
-              padding: "8px 16px",
-              lineHeight: "24px",
+              marginRight: "50px",
+              padding: "6px 15px ",
+              lineHeight: "20px",
             }}
           >
             DEPOSIT
@@ -252,7 +257,8 @@ export const HeaderGoldValley = ({ logOut, theBalance, theUsername }) => {
                 fontSize: "1rem",
                 fontWeight: "700",
                 color: "white",
-                marginLeft: "8px",
+                marginLeft: "10px",
+                paddingRight: "50px"
               }}
             >
               {"BALANCE:"}
@@ -263,7 +269,7 @@ export const HeaderGoldValley = ({ logOut, theBalance, theUsername }) => {
                 fontSize: "1rem",
                 fontWeight: "700",
                 color: "white",
-                marginLeft: "8px",
+                marginLeft: "10px",
               }}
             >
               {theBalance}
