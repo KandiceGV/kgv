@@ -908,49 +908,31 @@ const SlotGames = () => {
                     marginTop="180px"
                   >
                     <div className="the_jackpot" id="grand_jackpot">
-                      <span className="the_jackpot_first_line">
-                        GRAND JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
+                      <span className="pagesgrand_jackpot_second_line">
                         {"1234569 GVK"}
                       </span>
                     </div>
                   </Grid>
                   <Grid
                     item
-                    sm={7}
-                    xs={6}
+                    sm={12}
+                    xs={12}
                     style={{ display: "inline-flex" }}
                     justifyContent="center"
                     alignItems="center"
                   >
                     <div className="the_jackpot" id="major_jackpot">
-                      <span className="the_jackpot_first_line">
-                        MAJOR JACKPOT
-                      </span>
                       <span className="the_jackpot_second_line">
                         {"1234569 GVK"}
                       </span>
                     </div>
-                  </Grid>
-                  <Grid
-                    item
-                    sm={3}
-                    xs={6}
-                    style={{ display: "inline-flex" }}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
                     <div className="the_jackpot" id="minor_jackpot">
-                      <span className="the_jackpot_first_line">
-                        MINOR JACKPOT
-                      </span>
                       <span className="the_jackpot_second_line">
                         {"1234569 GVK"}
                       </span>
                     </div>
                   </Grid>
-                    <Grid item xs={11} sm={12} className="column_chips" marginTop="-150px">
+                    <Grid item xs={11} sm={12} className="column_chips" marginTop="-50px">
                       <div className="Chips" id="slot_games_in_page"></div>
                     </Grid>
                     <Grid
@@ -988,7 +970,7 @@ const SlotGames = () => {
                       >
                         <HomeIcon
                           // fontSize="large"
-                          style={{ color: "white", fontSize: "60px" }}
+                          style={{ color: "white", fontSize: "50px" }}
                         />
                       </IconButton>
                       {ShowTheGames && (
@@ -1037,9 +1019,8 @@ const SlotGames = () => {
                   <Grid
                     item
                     sm={12}
-                    xs={12}
+                    xs={8}
                     style={{
-                      paddingTop: "20px",
                       display: "inline-flex",
                       justifyContent: "center",
                     }}

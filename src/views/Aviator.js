@@ -532,56 +532,38 @@ const Aviator = () => {
                   >
                    <Grid
                     item
-                    xs={12}
+                    xs={12} sm={12} md={12}
                     style={{ display: "inline-flex" }}
                     justifyContent="center"
                     alignItems="center"
                     marginTop="180px"
                   >
                     <div className="the_jackpot" id="grand_jackpot">
-                      <span className="the_jackpot_first_line">
-                        GRAND JACKPOT
-                      </span>
-                      <span className="the_jackpot_second_line">
+                      <span className="pagesgrand_jackpot_second_line">
                         {"1234569 GVK"}
                       </span>
                     </div>
                   </Grid>
                   <Grid
                     item
-                    sm={7}
+                    sm={12}
                     xs={12}
                     style={{ display: "inline-flex" }}
                     justifyContent="center"
                     alignItems="center"
                   >
                     <div className="the_jackpot" id="major_jackpot">
-                      <span className="the_jackpot_first_line">
-                        MAJOR JACKPOT
-                      </span>
                       <span className="the_jackpot_second_line">
                         {"1234569 GVK"}
                       </span>
                     </div>
-                  </Grid>
-                  <Grid
-                    item
-                    sm={2}
-                    xs={12}
-                    style={{ display: "inline-flex" }}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
                     <div className="the_jackpot" id="minor_jackpot">
-                      <span className="the_jackpot_first_line">
-                        MINOR JACKPOT
-                      </span>
                       <span className="the_jackpot_second_line">
                         {"1234569 GVK"}
                       </span>
                     </div>
                   </Grid>
-                    <Grid item xs={12} className="column_chips" marginTop="-150px">
+                    <Grid item xs={11} sm={12} className="column_chips" marginTop="-50px">
                       <div className="Chips" id="aviator_spribe_in_page"></div>
                     </Grid>
                     <Grid
@@ -589,29 +571,29 @@ const Aviator = () => {
                       xs={12}
                       sx={{
                         margin: {
-                          xs: "40px 0px 0px 0px",
-                          sm: "20px 0px 0px 0px",
+                          xs: "0px 0px 0px 0px",
+                          sm: "0px 0px 0px 0px",
                         }
                       }}
                       style={{
-                        display: "flex",
+                        display: "inline-flex",
                         justifyContent: "space-between",
                         backgroundColor: "#2a2a2a",
                         borderBottom: "3px solid",
                         borderTop: "3px solid",
                         borderImage: 'linear-gradient(to right, #c58209, #ffff6c,#a86506 ) 1' ,
-                        marginBottom: "20px"
+                        marginBottom: "-4px"
                       }}
                     >
                       <IconButton
-                        size="large"
+                        size="small"
                         edge="end"
                         color="inherit"
                         disableRipple
                         style={{
                           borderRadius: "0px",
                           margin: "0px",
-                          padding: "-10px 10px -10px 10px",
+                          padding: "0px 0px 0px 0px",
                         }}
                         onClick={(event) => {
                           window.location.href = "/#/home";
@@ -619,7 +601,7 @@ const Aviator = () => {
                       >
                         <HomeIcon
                           // fontSize="large"
-                          style={{ color: "white", fontSize: "60px" }}
+                          style={{ color: "white", fontSize: "50px" }}
                         />
                       </IconButton>
                       {ShowTheGames && (
@@ -649,7 +631,7 @@ const Aviator = () => {
                       )}
                     </Grid>
                   </Grid>
-                </div>
+                </div> 
                 <Grid
                   container
                   className="Main_screen aviator"

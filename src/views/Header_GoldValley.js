@@ -179,14 +179,14 @@ export const HeaderGoldValley = ({ logOut, theBalance, theUsername }) => {
               style={{ color: "white" }}
             />
             <Typography
-              sx={{ display: { xs: "none", sm: "inherit" } }}
+              sx={{ display: { xs: "none", sm: "inherit", md: "inherit" } }}
               style={{
                 fontSize: "1rem",
                 fontWeight: "700",
                 color: "white",
                 // WebkitTextStroke: "0.5px black",
                 marginLeft: "10px",
-                paddingRight: "50px"
+                paddingRight: "30px"
               }}
             >
               {theUsername}

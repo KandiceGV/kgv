@@ -881,8 +881,8 @@ const Home = () => {
                 <div className="AllCategories_goldValley main_screen" >
                 <Grid
                     container
-                    rowSpacing={1}
-                    columnSpacing={3}
+                    rowSpacing={2}
+                    columnSpacing={1}
                     style={{
                       height: "700px",
                       alignItems: "flex-start",
@@ -896,20 +896,32 @@ const Home = () => {
                         flexDirection: "row"}}
                         className="jackpot_mainmajor"
                         id="jackpot_mainmajor"
-                      ></div>                     
+                      ><span className="major_jackpot_second_line">
+                      {TheJackpotValues[1].value + TheCurrency}
+                       </span>
+                       </div>                  
                     </Grid>
-                    <Grid item xs={1} sm={3} md={3}>
+                    <Grid item xs={1} sm={3}>
+
                       <div
+                      style={{
+                        flexDirection: "row"}}
                         className="jackpot_maingrand"
-                        id="jackpot_maingrand"
-                      ></div>                       
+                        id="jackpot_maingrand">
+                        <span className="grand_jackpot_second_line">
+                        {TheJackpotValues[0].value + TheCurrency}
+                       </span> </div>                 
                     </Grid>
                     
-                    <Grid item xs={1} sm={1} md={3}>
+                    <Grid item xs={1} sm={1}>
                       <div
+                      style={{
+                        flexDirection: "row"}}
                         className="jackpot_mainminor"
                         id="jackpot_mainminor"
-                      ></div>
+                      ><span className="minor_jackpot_second_line">
+                      {TheJackpotValues[2].value + TheCurrency}
+                     </span></div>
                     </Grid>
 
                   <Grid
