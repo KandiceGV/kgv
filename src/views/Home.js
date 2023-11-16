@@ -898,14 +898,14 @@ const Home = () => {
                         id="jackpot_mainmajor"
                       ></div>                     
                     </Grid>
-                    <Grid item xs={1} sm={3}>
+                    <Grid item xs={1} sm={3} md={3}>
                       <div
                         className="jackpot_maingrand"
                         id="jackpot_maingrand"
                       ></div>                       
                     </Grid>
                     
-                    <Grid item xs={1} sm={1}>
+                    <Grid item xs={1} sm={1} md={3}>
                       <div
                         className="jackpot_mainminor"
                         id="jackpot_mainminor"
@@ -921,7 +921,7 @@ const Home = () => {
                       marginTop: "0px",
                     }}
                   >                  
-                   <Grid item xs={3} sm={3} className="column_chips">
+                   <Grid item xs={3} sm={3} md={3} className="column_chips">
                       <div
                         className="Chips main_screen"
                         id="slot_games"
@@ -931,7 +931,7 @@ const Home = () => {
                       ></div>
                       
                     </Grid>
-                    <Grid item xs={3} sm={3} className="column_chips">
+                    <Grid item xs={3} sm={3} md={3} className="column_chips">
                       <div
                         className="Chips main_screen"
                         id="new_games"
@@ -940,7 +940,7 @@ const Home = () => {
                         }}
                       ></div>
                     </Grid>
-                    <Grid item xs={3} sm={3} className="column_chips">
+                    <Grid item xs={3} sm={3} md={3} className="column_chips">
                       <div
                         className="Chips main_screen"
                         id="live_tables"
@@ -949,7 +949,7 @@ const Home = () => {
                         }}
                       ></div>
                     </Grid>
-                    <Grid xs={3} sm={3} className="column_chips">
+                    <Grid xs={3} sm={3} md={3} className="column_chips">
                       <div
                         className="Chips main_screen"
                         id="aviator_spribe"
@@ -958,7 +958,7 @@ const Home = () => {
                         }}
                       ></div>
                       </Grid>
-                      <Grid item xs={3} sm={3} className="column_chips">
+                      <Grid item xs={3} sm={3} md={3} className="column_chips">
                      <div
                      className="Chips_letters"
                         id="slot_games_letters"

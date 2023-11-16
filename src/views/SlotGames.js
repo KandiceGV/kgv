@@ -896,12 +896,12 @@ const SlotGames = () => {
                     style={{
                       height: "100%",
                       alignItems: "flex-start",
-                      marginBottom: "-8px"
+                      marginBottom: "8px"
                     }}
                   >
                    <Grid
                     item
-                    xs={12} sm={12}
+                    xs={12} sm={12} md={12}
                     style={{ display: "inline-flex" }}
                     justifyContent="center"
                     alignItems="center"
@@ -958,8 +958,8 @@ const SlotGames = () => {
                       xs={12}
                       sx={{
                         margin: {
-                          xs: "60px 0px 0px 0px",
-                          sm: "25px 0px 0px 0px",
+                          xs: "0px 0px 0px 0px",
+                          sm: "0px 0px 0px 0px",
                         }
                       }}
                       style={{
@@ -969,18 +969,18 @@ const SlotGames = () => {
                         borderBottom: "3px solid",
                         borderTop: "3px solid",
                         borderImage: 'linear-gradient(to right, #c58209, #ffff6c,#a86506 ) 1' ,
-                        marginBottom: "20px"
+                        marginBottom: "-4px"
                       }}
                     >
                       <IconButton
-                        size="large"
+                        size="small"
                         edge="end"
                         color="inherit"
                         disableRipple
                         style={{
                           borderRadius: "0px",
                           margin: "0px",
-                          padding: "-10px 0px -10px 0px",
+                          padding: "0px 0px 0px 0px",
                         }}
                         onClick={(event) => {
                           window.location.href = "/#/home";
