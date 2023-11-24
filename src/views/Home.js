@@ -875,24 +875,25 @@ const Home = () => {
                   width: "100%",
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "center",
+                  alignItems: "stretch",
                 }}
               >
                 <div className="AllCategories_goldValley main_screen" >
                 <Grid
                     container
-                    rowSpacing={2}
-                    columnSpacing={1}
                     style={{
                       height: "700px",
-                      alignItems: "flex-start",
+                      alignItems: "stretch",
                       marginTop: "80px",
-                      marginBottom: "-10px",
+                      marginBottom: "10px",
                     }}
                   >
-                    <Grid item xs={1} sm={4}>
+                    <Grid item xs={4} sm={true} md={4} lg={4} xl={4}>
                     <div
                        style={{
+                        display: "flex",
+                        justifyContent: "space-evenly", // Centers horizontally
+                        alignItems: "stretch", // Centers vertically
                         flexDirection: "row"}}
                         className="jackpot_mainmajor"
                         id="jackpot_mainmajor"
@@ -901,22 +902,28 @@ const Home = () => {
                        </span>
                        </div>                  
                     </Grid>
-                    <Grid item xs={1} sm={3}>
 
+                    <Grid item xs={4} sm={true} md={4} lg={4} xl={4}>
                       <div
                       style={{
+                        display: "flex",
+                        justifyContent: "center", // Centers horizontally
+                        alignItems: "stretch", // Centers vertically
                         flexDirection: "row"}}
                         className="jackpot_maingrand"
                         id="jackpot_maingrand">
                         <span className="grand_jackpot_second_line">
                         {TheJackpotValues[0].value + TheCurrency}
-                       </span> </div>                 
+                       </span></div>                 
                     </Grid>
                     
-                    <Grid item xs={1} sm={1}>
+                    <Grid item xs={4} sm={true} md={4} lg={4} xl={4}>
                       <div
                       style={{
-                        flexDirection: "row"}}
+                        display: "flex",
+                        justifyContent: "space-evenly", // Centers horizontally
+                        alignItems: "center", // Centers vertically
+                        flexDirection: "column"}}
                         className="jackpot_mainminor"
                         id="jackpot_mainminor"
                       ><span className="minor_jackpot_second_line">
@@ -933,7 +940,7 @@ const Home = () => {
                       marginTop: "0px",
                     }}
                   >                  
-                   <Grid item xs={3} sm={3} md={3} className="column_chips">
+                   <Grid item xs={3} sm={3} className="column_chips">
                       <div
                         className="Chips main_screen"
                         id="slot_games"
@@ -943,7 +950,7 @@ const Home = () => {
                       ></div>
                       
                     </Grid>
-                    <Grid item xs={3} sm={3} md={3} className="column_chips">
+                    <Grid item xs={3} sm={3} className="column_chips">
                       <div
                         className="Chips main_screen"
                         id="new_games"
